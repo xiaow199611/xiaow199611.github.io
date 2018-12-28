@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[���ҵĵ�һһ�����˲��ͣ�����hexo+GitHub]]></title>
+    <url>%2F2018%2F12%2F28%2Fmy%20first%20blog%2F</url>
+    <content type="text"><![CDATA[����ǰ������д���͵��뷨�����ǿ�ʼ�����ϸ������ʺ��Լ��Ĳ�����վ�����˺ͼ���֮���Ȼ�������ȽϷ��㣬�������Ĺ���Լ���Ӫ�����������˷��У������������������������Խ��Խϲ����Լ������԰��CSDNĿǰ�����ĽϺã���ʧΪһ���õ�ȥ������ȴ���ܷ�IT��صĲ���;���о���֪���ˣ���ƾĿǰ��ˮƽ������ȥ�ҷ��ԣ����Է��Է�ȥ������֮��ȴ�Ų��±���լ��������ꡣ �����¶������Լ��˽�˲��ͣ�����Ŀǰֻ�Ƿ������ģ��������Լ������г��ھ��÷����ԭ������ѡ��hexo+GitHub����˲��ͣ���������Ҳ��ֱ��������GitHub�ṩ����������� ������Σ�����Ҳ���и���ŵĵ��ˣ��ҵĲ��;ʹ����￪ʼ�ˡ�]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F12%2F28%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
