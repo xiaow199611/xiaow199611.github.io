@@ -32,20 +32,4 @@
     
   </entry>
   
-  <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2018/12/28/hello-world/"/>
-    <id>http://yoursite.com/2018/12/28/hello-world/</id>
-    <published>2018-12-28T02:34:37.728Z</published>
-    <updated>2018-12-28T12:08:45.048Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.
-    
-    </summary>
-    
-    
-  </entry>
-  
 </feed>
