@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-02T04:45:22.500Z</updated>
+  <updated>2020-05-02T06:39:14.300Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MUSIC</title>
+    <link href="http://yoursite.com/2020/05/02/Music/"/>
+    <id>http://yoursite.com/2020/05/02/Music/</id>
+    <published>2020-05-02T06:17:44.566Z</published>
+    <updated>2020-05-02T06:39:14.300Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div class=&quot;aplayer&quot; data-id=&quot;972904675&quot; data-server=&quot;netease&quot; data-type=&quot;playlist&quot; data-autoplay=&quot;false&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="日记" scheme="http://yoursite.com/categories/%E6%97%A5%E8%AE%B0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</title>
@@ -65,7 +89,7 @@
     <link href="http://yoursite.com/2018/12/28/this%20is%20my%20first%20blog/"/>
     <id>http://yoursite.com/2018/12/28/this is my first blog/</id>
     <published>2018-12-27T16:00:00.000Z</published>
-    <updated>2020-05-02T06:11:07.875Z</updated>
+    <updated>2020-05-02T06:18:08.961Z</updated>
     
     <summary type="html">
     
