@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-01T06:22:04.454Z</updated>
+  <updated>2020-05-02T03:38:08.922Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,10 +17,56 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</title>
+    <link href="http://yoursite.com/2020/05/02/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/"/>
+    <id>http://yoursite.com/2020/05/02/Ultrasensitive and ultrathin phototransistors and photonic synapses/</id>
+    <published>2020-05-02T03:30:08.813Z</published>
+    <updated>2020-05-02T03:38:08.922Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;研究目的和意义&quot;&gt;&lt;a href=&quot;#研究目的和意义&quot; class=&quot;headerlink&quot; title=&quot;研究目的和意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;研究目的和意义&lt;/strong&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。&lt;/li&gt;
+&lt;li&gt;2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。&lt;/li&gt;
+&lt;li&gt;3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。
+    
+    </summary>
+    
+      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Optoelectronic Perovskite Synapses for Neuromorphic Computing</title>
+    <link href="http://yoursite.com/2020/05/02/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/"/>
+    <id>http://yoursite.com/2020/05/02/Optoelectronic Perovskite Synapses for Neuromorphic/</id>
+    <published>2020-05-02T03:20:38.700Z</published>
+    <updated>2020-05-02T03:36:29.669Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;文章概要及研究意义&quot;&gt;&lt;a href=&quot;#文章概要及研究意义&quot; class=&quot;headerlink&quot; title=&quot;文章概要及研究意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;文章概要及研究意义&lt;/strong&gt;&lt;/h1&gt;&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。&lt;/li&gt;
+&lt;li&gt;2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。&lt;/li&gt;
+&lt;li&gt;3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。
+    
+    </summary>
+    
+      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>记第一个个人博客，基于hexo+GitHub</title>
-    <link href="http://yoursite.com/2018/12/28/this%20is%20my%20first%20blog/"/>
-    <id>http://yoursite.com/2018/12/28/this is my first blog/</id>
-    <published>2018-12-28T14:22:51.027Z</published>
+    <link href="http://yoursite.com/2020/05/01/this%20is%20my%20first%20blog/"/>
+    <id>http://yoursite.com/2020/05/01/this is my first blog/</id>
+    <published>2020-05-01T06:21:31.410Z</published>
     <updated>2020-05-01T06:22:04.454Z</updated>
     
     <summary type="html">
