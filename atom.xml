@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-12-28T05:59:30.925Z</updated>
+  <updated>2020-12-28T06:02:33.796Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,12 @@
     <link href="http://yoursite.com/2020/12/28/multi-state%20operations%20for%20Neuromorphic%20Computing/"/>
     <id>http://yoursite.com/2020/12/28/multi-state operations for Neuromorphic Computing/</id>
     <published>2020-12-27T16:00:00.000Z</published>
-    <updated>2020-12-28T05:59:30.925Z</updated>
+    <updated>2020-12-28T06:02:33.796Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
+      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20201227233120727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;在这里插入图片描述&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;研究目的和意义&quot;&gt;&lt;a href=&quot;#研究目的和意义&quot; class=&quot;headerlink&quot; title=&quot;研究目的和意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;研究目的和意义&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;神经网络计算中，需要器件具备多态运算的能力。然而目前的大多数细丝型的忆阻器件的电导都是顺变的，也就是二值化(0,1)；另外一方面，目前报道的缓变器件表现出保持性和一致性差，开关速度慢等特点。在这篇文章中提出了一种新型的器件结构HfOx/TEL RRAM   ，能够提高器件的缓变性能，并在1kb的RRAM阵列上表现出优异的缓变开关属性。
     
     </summary>
     
