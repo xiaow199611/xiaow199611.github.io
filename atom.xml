@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-09-17T09:07:38.637Z</updated>
+  <updated>2022-09-17T13:39:51.218Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2022/09/17/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%A4%8D%E4%B9%A0/"/>
     <id>http://yoursite.com/2022/09/17/半导体物理复习/</id>
     <published>2022-09-16T16:00:00.000Z</published>
-    <updated>2022-09-17T09:07:38.637Z</updated>
+    <updated>2022-09-17T13:39:51.218Z</updated>
     
     <summary type="html">
     
@@ -30,50 +30,6 @@
     </summary>
     
       <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</title>
-    <link href="http://yoursite.com/2022/09/10/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/"/>
-    <id>http://yoursite.com/2022/09/10/Ultrasensitive and ultrathin phototransistors and photonic synapses/</id>
-    <published>2022-09-10T15:36:22.382Z</published>
-    <updated>2020-05-02T04:45:22.500Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;研究目的和意义&quot;&gt;&lt;a href=&quot;#研究目的和意义&quot; class=&quot;headerlink&quot; title=&quot;研究目的和意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;研究目的和意义&lt;/strong&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。&lt;/li&gt;
-&lt;li&gt;2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。&lt;/li&gt;
-&lt;li&gt;3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。
-    
-    </summary>
-    
-      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Optoelectronic Perovskite Synapses for Neuromorphic Computing</title>
-    <link href="http://yoursite.com/2022/09/10/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/"/>
-    <id>http://yoursite.com/2022/09/10/Optoelectronic Perovskite Synapses for Neuromorphic/</id>
-    <published>2022-09-10T15:36:22.333Z</published>
-    <updated>2020-05-02T04:38:23.596Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;文章概要及研究意义&quot;&gt;&lt;a href=&quot;#文章概要及研究意义&quot; class=&quot;headerlink&quot; title=&quot;文章概要及研究意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;文章概要及研究意义&lt;/strong&gt;&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。&lt;/li&gt;
-&lt;li&gt;2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。&lt;/li&gt;
-&lt;li&gt;3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。
-    
-    </summary>
-    
-      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
     
     
   </entry>
@@ -98,15 +54,59 @@
   </entry>
   
   <entry>
+    <title>Optoelectronic Perovskite Synapses for Neuromorphic Computing</title>
+    <link href="http://yoursite.com/2020/05/02/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/"/>
+    <id>http://yoursite.com/2020/05/02/Optoelectronic Perovskite Synapses for Neuromorphic/</id>
+    <published>2020-05-01T16:00:00.000Z</published>
+    <updated>2022-09-17T13:39:00.927Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;文章概要及研究意义&quot;&gt;&lt;a href=&quot;#文章概要及研究意义&quot; class=&quot;headerlink&quot; title=&quot;文章概要及研究意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;文章概要及研究意义&lt;/strong&gt;&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。&lt;/li&gt;
+&lt;li&gt;2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。&lt;/li&gt;
+&lt;li&gt;3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。
+    
+    </summary>
+    
+      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</title>
+    <link href="http://yoursite.com/2020/05/02/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/"/>
+    <id>http://yoursite.com/2020/05/02/Ultrasensitive and ultrathin phototransistors and photonic synapses/</id>
+    <published>2020-05-01T16:00:00.000Z</published>
+    <updated>2022-09-17T13:39:42.954Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;研究目的和意义&quot;&gt;&lt;a href=&quot;#研究目的和意义&quot; class=&quot;headerlink&quot; title=&quot;研究目的和意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;研究目的和意义&lt;/strong&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。&lt;/li&gt;
+&lt;li&gt;2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。&lt;/li&gt;
+&lt;li&gt;3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。
+    
+    </summary>
+    
+      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>记第一个个人博客，基于hexo+GitHub</title>
     <link href="http://yoursite.com/2018/12/28/this%20is%20my%20first%20blog/"/>
     <id>http://yoursite.com/2018/12/28/this is my first blog/</id>
     <published>2018-12-27T16:00:00.000Z</published>
-    <updated>2022-09-17T13:28:36.291Z</updated>
+    <updated>2022-09-17T13:38:21.241Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;萌生想法&quot;&gt;&lt;a href=&quot;#萌生想法&quot; class=&quot;headerlink&quot; title=&quot;萌生想法&quot;&gt;&lt;/a&gt;萌生想法&lt;/h2&gt;&lt;p&gt;&amp;amp;#x0020&amp;amp;#x0020半年前就有了写博客的想法，于是开始在网上各种找适合自己的博客网站。新浪和简书    之类固然用起来比较方便，但满屏的广告以及推送让人反感，发现随着年龄的增长，反而越来越喜欢简约；博客园，CSDN目前管理的较好，不失为一个好的去处，但却只能发IT相关的博文;再有就是知乎了，但凭目前的水平还不敢去乱发表意见；所以放眼望去，世界之大，却放不下安静的灵魂。
+      &lt;h2 id=&quot;萌生想法&quot;&gt;&lt;a href=&quot;#萌生想法&quot; class=&quot;headerlink&quot; title=&quot;萌生想法&quot;&gt;&lt;/a&gt;萌生想法&lt;/h2&gt;&lt;p&gt;&amp;amp;emsp;&amp;amp;emsp;半年前就有了写博客的想法，于是开始在网上各种找适合自己的博客网站。新浪和简书    之类固然用起来比较方便，但满屏的广告以及推送让人反感，发现随着年龄的增长，反而越来越喜欢简约；博客园，CSDN目前管理的较好，不失为一个好的去处，但却只能发IT相关的博文;再有就是知乎了，但凭目前的水平还不敢去乱发表意见；所以放眼望去，世界之大，却放不下安静的灵魂。
     
     </summary>
     
