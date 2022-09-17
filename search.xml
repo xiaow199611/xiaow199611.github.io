@@ -1,84 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Optoelectronic Perovskite Synapses for Neuromorphic Computing</title>
-    <url>/2020/05/02/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<h1 id="文章概要及研究意义"><a href="#文章概要及研究意义" class="headerlink" title="文章概要及研究意义"></a><strong>文章概要及研究意义</strong></h1><ul>
-<li>1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。</li>
-<li>2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。</li>
-<li>3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。<span id="more"></span></li>
-<li>4.意义：该光电子突触在人工智能，特别是视觉相关的人工智能，计算方面有很好的应用前景。</li>
-</ul>
-<h1 id="结果和讨论"><a href="#结果和讨论" class="headerlink" title="结果和讨论"></a>结果和讨论</h1><h2 id="1-器件设计和表征"><a href="#1-器件设计和表征" class="headerlink" title="1.器件设计和表征"></a>1.器件设计和表征</h2><p><img src="https://img-blog.csdnimg.cn/20200501200037646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<ul>
-<li><p><strong>Figure 1a</strong> 为器件结构示意图：二端ITO&#x2F;PEDOT:PSS&#x2F;CuSCN(硫氰酸亚铜)&#x2F; CsPbBr3 PNs（Perovskite nanoplates）&#x2F;Au结构。其中电导变化主要由PEDOT:PSS&#x2F;CuSCN界面对电荷的俘获和释放造成，PNs提供光效应。通过旋涂工艺将三个功能层依次沉积在图案化的ITO涂层玻璃的表面上，Au电极通过热蒸发制备。</p>
-</li>
-<li><p><strong>Figure 1b</strong> 通过XRD可知，通过high-temperature injection method制备的全无机CsPbBr3 perovskite nanoplates具有良好的结晶性。峰2θ&#x3D; 14.7°和30.5°对应斜方晶系的CsPbBr3的(001)和(002)衍射峰,表明成功合成CsPbBr3 PNs。</p>
-</li>
-<li><p><strong>Figure 1c</strong> 为CsPbBr3 PNs的光致发光（PL）和吸收光谱。 在PL光谱中，合成后的CsPbBr3 PNs在490 nm处有一个发光峰，插图显示CsPbBr3 PN在365 nm紫外线（UV）激发下发出均匀且稳定的蓝绿色光；CsPbBr3 PNs的吸收光谱中的吸收峰位于470 nm，由于斯托克斯位移，来自CsPbBr3 PNs的吸收光谱中的吸收峰位于470 nm，与发光峰相比，蓝移为20 nm。</p>
-</li>
-<li><p><strong>Figure 1d</strong> 为CsPbBr3 PNs的TEM图像。由图可知，合成后的CsPbBr3 PNs分布均匀且大小均匀，平均大小为20–25 nm，直立的PNs平均厚度为3-5 nm。</p>
-</li>
-<li><p><strong>Figure 1e,f</strong> 为聚焦离子束切割的横截面TEM图像。样品表面喷涂金和铂以保护样品和使用TEM便于观察，由图可知CsPbBr3 PNs薄层的厚度为6–8 nm。</p>
-<h2 id="2-电突触可塑性"><a href="#2-电突触可塑性" class="headerlink" title="2.电突触可塑性"></a>2.电突触可塑性</h2></li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200501205936570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<ul>
-<li><strong>Figure 2a</strong> 插图为光电突触的光学照片(4 × 4 crossbar structure)，外部电压施加于ITO底部电极，Au电极接地。连续施加15个双正电压扫描(0$\rightarrow$1.5$\rightarrow$0 V)的器件电流如图1所示，随着电压扫频次数的增加，器件的电导不断增大并趋于饱和。</li>
-<li><strong>Figure s4</strong> 当连续15次出现双负电压扫描时(0$\rightarrow$−1.5$\rightarrow$0 V)，器件电导随负电流的变化很小。</li>
-<li><strong>Figure 2b</strong> 但是，有15个连续应用双重负数电压扫描(0$\rightarrow$−1.5$\rightarrow$0 V)可以使器件其恢复到原始状态并在正电压偏置下展现其原始电学性能。</li>
-<li><strong>Figure 2c</strong> 施加20个相同的正脉冲（1.5 V，100 ms），然后再施加20个相同的负脉冲（-1.5 V，100 ms），脉冲间隔为1 s，在每个脉冲后，通过0.1 V读取电压测量电流，可以看到经典的增强和抑制过程，这表明器件表现出出色的电子突触可塑性。</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200501210949959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<ul>
-<li><p><strong>Figure 2d</strong> PPF效应，良好的拟合结果表明器件具有模仿生物突触的PPF效果的良好潜力。</p>
-</li>
-<li><p><strong>Figure 2e</strong> 脉冲（2 V，100 ms）和读取脉冲（0.1 V）的固定,刺激脉冲N的数量控制在30-100之间,随着刺激脉冲数量的增加，突触重量逐渐增加。当N &#x3D; 30时，600 s后的突触重量减少到50％;但是当N逐渐增加到100时，600 s后的突触重量可以保持在近80％。这些结果表明，通过增加刺激脉冲的数量，可以在器件中实现从STM到LTM的过渡。</p>
-</li>
-<li><p><strong>Figure 2f</strong> 激励电压越强以及脉冲数目越多，PEDOT：PSS &#x2F; CuSCN界面倾向于捕获更多的电荷，从而导致器件的更大的电导变化。</p>
-<h2 id="3-光突触可塑性"><a href="#3-光突触可塑性" class="headerlink" title="3.光突触可塑性"></a>3.光突触可塑性</h2></li>
-<li><p>对于光子突触可塑性，其电阻切换机制类似于电切换（归因于PEDOT：PSS &#x2F; CuSCN接口上的电荷捕获和释放）。不同之处在于，光切换捕获的电荷主要来自CsPbBr3 PNs上电子空穴对的分离，以实现光子突触可塑性。</p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200501212731881.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<ul>
-<li><p><strong>Figure 3a</strong> 光突触可塑性实验装置，UV light（371nm），器件电流使用较小的读取电压脉冲进行测量（振幅：0.1 V；宽度：0.1 s；频率：1 Hz）。</p>
-</li>
-<li><p><strong>Figure 3b</strong> PPC效应。</p>
-</li>
-<li><p><strong>Figure 3c,d</strong> PPF效应。脉冲光刺激引起的PPF与在生物突触中观察到的结果相一致，表明器件具有良好的模拟光子突触的潜力。</p>
-</li>
-<li><p><strong>Figure 3e</strong> 光强依赖可塑性。相同的照明时间，光强度越强，测量电流的越大。电子-空穴对的分离是由CsPbBr3 PNs接收的光照产生的，更强的照明意味着更高的分离效率，进而导致PEDOT：PSS &#x2F; CuSCN界面处的电荷俘获效率提高。</p>
-</li>
-<li><p><strong>Figure 3f</strong> 光照时长依赖可塑性。对于相同的照明强度，测量电流随着照明时间的增加而逐渐增加。</p>
-<h2 id="4-Learning-Experience-Behavior"><a href="#4-Learning-Experience-Behavior" class="headerlink" title="4.Learning-Experience Behavior"></a>4.Learning-Experience Behavior</h2></li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200501215908103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<ul>
-<li><p><strong>光电耦合作用对器件的影响：</strong>固定了6.7 mW&#x2F;$cm^{-2}$ 的施加光强度和10 s的照明时间，通过调整光电耦合作用研究了器件的基本特性,每次测试后，通过施加30个相同的负脉冲（−2 V，100 ms），确保器件返回其初始电导状态。</p>
-</li>
-<li><p><strong>Figure 4a,b,c</strong> 无论外部电压脉冲的幅度为0.1、0.25或0.5 V（宽度0.1 s；频率2 Hz），在第一次照明时，器件电导的变化基本上是相同的，即小振幅电压脉冲不会改变器件的电导率，电导的变化基本上是由光照驱动的，因此在三个不同幅度的电压幅值下，观察到的电导变化基本相同，但是反复测试发现，较大的外部偏置电压会导致后续测量期间器件的电导增加更大。文章认为，外部电压脉冲（&lt;0.5 V）不会改变器件的电导率，即PEDOT：PSS &#x2F; CuSCN接口的电荷陷阱，但是，较大的外部电压会导致大量由CsPbBr3 PNs分离的光生电荷被CuSCN功能层捕获，尽管所施加的负电压脉冲会消除PEDOT：PSS &#x2F; CuSCN界面处的俘获电荷，使设备电导返回其原始状态，但它们并不能完全消除CuSCN功能层的俘获电荷，下次光脉冲电荷来临，形成电荷累积，从而加快了我们设备的电导率。</p>
-</li>
-<li><p><strong>Figure 4d</strong> 从生物学上讲，人类可以通过学习逐渐掌握对某事物的认知，并且随着时间的流逝，这种认知将逐渐被遗忘，但是当人再次学习相同的事物时，达到相同的认知水平将需要更少的时间。图4d中，将0.5 V的外部电压脉冲和间歇光照施加到器件中。 第一个光照（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）使器件电导从17 µS增加到39 µS，用时6.8s，停止光照一段时间后，器件电导衰减到30 µS；第二次光照（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）使器件电导重新增加到39 µS，仅用时1.6s。</p>
-</li>
-</ul>
-<h2 id="5-Memory-Backtracking-Function"><a href="#5-Memory-Backtracking-Function" class="headerlink" title="5.Memory Backtracking Function"></a>5.Memory Backtracking Function</h2><ul>
-<li>回溯功能中，将整个过程分为三个阶段：即学习，遗忘和回溯。</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200501223628873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
-<ul>
-<li><strong>学习过程：</strong>如虚线框所示，“ L”形光照明（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）和特定的正脉冲（0.1，0.25，0.5V）施加到器件上。</li>
-<li><strong>遗忘过程：</strong>30个相同的负脉冲（−2 V，100 ms）施加到器件。</li>
-<li><strong>回溯过程：</strong>如虚线框所示，全范围光照明（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）和特定的正脉冲（0.1，0.25，0.5V）施加到器件上。</li>
-<li><strong>结果分析：</strong>学习过程之后，被光照射的区域的电导率显著上升，字母“ L”已存储在3×2光电突触阵列上；忘记后，器件电导恢复到初始值；回溯过程中，光照使得六个器件发生了相同的电导变化，但0.1 V的正电压脉冲不会启用存储器回溯功能，施加0.25和0.5 V的正电压脉冲时，回溯过程完成后，在光电突触阵列上很容易观察到字母“ L”，表明此时容易出现回溯功能。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>科研</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</title>
     <url>/2020/05/02/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
@@ -160,12 +82,90 @@
       </categories>
   </entry>
   <entry>
+    <title>Optoelectronic Perovskite Synapses for Neuromorphic Computing</title>
+    <url>/2020/05/02/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><img src="https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<h1 id="文章概要及研究意义"><a href="#文章概要及研究意义" class="headerlink" title="文章概要及研究意义"></a><strong>文章概要及研究意义</strong></h1><ul>
+<li>1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。</li>
+<li>2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。</li>
+<li>3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。<span id="more"></span></li>
+<li>4.意义：该光电子突触在人工智能，特别是视觉相关的人工智能，计算方面有很好的应用前景。</li>
+</ul>
+<h1 id="结果和讨论"><a href="#结果和讨论" class="headerlink" title="结果和讨论"></a>结果和讨论</h1><h2 id="1-器件设计和表征"><a href="#1-器件设计和表征" class="headerlink" title="1.器件设计和表征"></a>1.器件设计和表征</h2><p><img src="https://img-blog.csdnimg.cn/20200501200037646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>Figure 1a</strong> 为器件结构示意图：二端ITO&#x2F;PEDOT:PSS&#x2F;CuSCN(硫氰酸亚铜)&#x2F; CsPbBr3 PNs（Perovskite nanoplates）&#x2F;Au结构。其中电导变化主要由PEDOT:PSS&#x2F;CuSCN界面对电荷的俘获和释放造成，PNs提供光效应。通过旋涂工艺将三个功能层依次沉积在图案化的ITO涂层玻璃的表面上，Au电极通过热蒸发制备。</p>
+</li>
+<li><p><strong>Figure 1b</strong> 通过XRD可知，通过high-temperature injection method制备的全无机CsPbBr3 perovskite nanoplates具有良好的结晶性。峰2θ&#x3D; 14.7°和30.5°对应斜方晶系的CsPbBr3的(001)和(002)衍射峰,表明成功合成CsPbBr3 PNs。</p>
+</li>
+<li><p><strong>Figure 1c</strong> 为CsPbBr3 PNs的光致发光（PL）和吸收光谱。 在PL光谱中，合成后的CsPbBr3 PNs在490 nm处有一个发光峰，插图显示CsPbBr3 PN在365 nm紫外线（UV）激发下发出均匀且稳定的蓝绿色光；CsPbBr3 PNs的吸收光谱中的吸收峰位于470 nm，由于斯托克斯位移，来自CsPbBr3 PNs的吸收光谱中的吸收峰位于470 nm，与发光峰相比，蓝移为20 nm。</p>
+</li>
+<li><p><strong>Figure 1d</strong> 为CsPbBr3 PNs的TEM图像。由图可知，合成后的CsPbBr3 PNs分布均匀且大小均匀，平均大小为20–25 nm，直立的PNs平均厚度为3-5 nm。</p>
+</li>
+<li><p><strong>Figure 1e,f</strong> 为聚焦离子束切割的横截面TEM图像。样品表面喷涂金和铂以保护样品和使用TEM便于观察，由图可知CsPbBr3 PNs薄层的厚度为6–8 nm。</p>
+<h2 id="2-电突触可塑性"><a href="#2-电突触可塑性" class="headerlink" title="2.电突触可塑性"></a>2.电突触可塑性</h2></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501205936570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>Figure 2a</strong> 插图为光电突触的光学照片(4 × 4 crossbar structure)，外部电压施加于ITO底部电极，Au电极接地。连续施加15个双正电压扫描(0$\rightarrow$1.5$\rightarrow$0 V)的器件电流如图1所示，随着电压扫频次数的增加，器件的电导不断增大并趋于饱和。</li>
+<li><strong>Figure s4</strong> 当连续15次出现双负电压扫描时(0$\rightarrow$−1.5$\rightarrow$0 V)，器件电导随负电流的变化很小。</li>
+<li><strong>Figure 2b</strong> 但是，有15个连续应用双重负数电压扫描(0$\rightarrow$−1.5$\rightarrow$0 V)可以使器件其恢复到原始状态并在正电压偏置下展现其原始电学性能。</li>
+<li><strong>Figure 2c</strong> 施加20个相同的正脉冲（1.5 V，100 ms），然后再施加20个相同的负脉冲（-1.5 V，100 ms），脉冲间隔为1 s，在每个脉冲后，通过0.1 V读取电压测量电流，可以看到经典的增强和抑制过程，这表明器件表现出出色的电子突触可塑性。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501210949959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>Figure 2d</strong> PPF效应，良好的拟合结果表明器件具有模仿生物突触的PPF效果的良好潜力。</p>
+</li>
+<li><p><strong>Figure 2e</strong> 脉冲（2 V，100 ms）和读取脉冲（0.1 V）的固定,刺激脉冲N的数量控制在30-100之间,随着刺激脉冲数量的增加，突触重量逐渐增加。当N &#x3D; 30时，600 s后的突触重量减少到50％;但是当N逐渐增加到100时，600 s后的突触重量可以保持在近80％。这些结果表明，通过增加刺激脉冲的数量，可以在器件中实现从STM到LTM的过渡。</p>
+</li>
+<li><p><strong>Figure 2f</strong> 激励电压越强以及脉冲数目越多，PEDOT：PSS &#x2F; CuSCN界面倾向于捕获更多的电荷，从而导致器件的更大的电导变化。</p>
+<h2 id="3-光突触可塑性"><a href="#3-光突触可塑性" class="headerlink" title="3.光突触可塑性"></a>3.光突触可塑性</h2></li>
+<li><p>对于光子突触可塑性，其电阻切换机制类似于电切换（归因于PEDOT：PSS &#x2F; CuSCN接口上的电荷捕获和释放）。不同之处在于，光切换捕获的电荷主要来自CsPbBr3 PNs上电子空穴对的分离，以实现光子突触可塑性。</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501212731881.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>Figure 3a</strong> 光突触可塑性实验装置，UV light（371nm），器件电流使用较小的读取电压脉冲进行测量（振幅：0.1 V；宽度：0.1 s；频率：1 Hz）。</p>
+</li>
+<li><p><strong>Figure 3b</strong> PPC效应。</p>
+</li>
+<li><p><strong>Figure 3c,d</strong> PPF效应。脉冲光刺激引起的PPF与在生物突触中观察到的结果相一致，表明器件具有良好的模拟光子突触的潜力。</p>
+</li>
+<li><p><strong>Figure 3e</strong> 光强依赖可塑性。相同的照明时间，光强度越强，测量电流的越大。电子-空穴对的分离是由CsPbBr3 PNs接收的光照产生的，更强的照明意味着更高的分离效率，进而导致PEDOT：PSS &#x2F; CuSCN界面处的电荷俘获效率提高。</p>
+</li>
+<li><p><strong>Figure 3f</strong> 光照时长依赖可塑性。对于相同的照明强度，测量电流随着照明时间的增加而逐渐增加。</p>
+<h2 id="4-Learning-Experience-Behavior"><a href="#4-Learning-Experience-Behavior" class="headerlink" title="4.Learning-Experience Behavior"></a>4.Learning-Experience Behavior</h2></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501215908103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>光电耦合作用对器件的影响：</strong>固定了6.7 mW&#x2F;$cm^{-2}$ 的施加光强度和10 s的照明时间，通过调整光电耦合作用研究了器件的基本特性,每次测试后，通过施加30个相同的负脉冲（−2 V，100 ms），确保器件返回其初始电导状态。</p>
+</li>
+<li><p><strong>Figure 4a,b,c</strong> 无论外部电压脉冲的幅度为0.1、0.25或0.5 V（宽度0.1 s；频率2 Hz），在第一次照明时，器件电导的变化基本上是相同的，即小振幅电压脉冲不会改变器件的电导率，电导的变化基本上是由光照驱动的，因此在三个不同幅度的电压幅值下，观察到的电导变化基本相同，但是反复测试发现，较大的外部偏置电压会导致后续测量期间器件的电导增加更大。文章认为，外部电压脉冲（&lt;0.5 V）不会改变器件的电导率，即PEDOT：PSS &#x2F; CuSCN接口的电荷陷阱，但是，较大的外部电压会导致大量由CsPbBr3 PNs分离的光生电荷被CuSCN功能层捕获，尽管所施加的负电压脉冲会消除PEDOT：PSS &#x2F; CuSCN界面处的俘获电荷，使设备电导返回其原始状态，但它们并不能完全消除CuSCN功能层的俘获电荷，下次光脉冲电荷来临，形成电荷累积，从而加快了我们设备的电导率。</p>
+</li>
+<li><p><strong>Figure 4d</strong> 从生物学上讲，人类可以通过学习逐渐掌握对某事物的认知，并且随着时间的流逝，这种认知将逐渐被遗忘，但是当人再次学习相同的事物时，达到相同的认知水平将需要更少的时间。图4d中，将0.5 V的外部电压脉冲和间歇光照施加到器件中。 第一个光照（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）使器件电导从17 µS增加到39 µS，用时6.8s，停止光照一段时间后，器件电导衰减到30 µS；第二次光照（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）使器件电导重新增加到39 µS，仅用时1.6s。</p>
+</li>
+</ul>
+<h2 id="5-Memory-Backtracking-Function"><a href="#5-Memory-Backtracking-Function" class="headerlink" title="5.Memory Backtracking Function"></a>5.Memory Backtracking Function</h2><ul>
+<li>回溯功能中，将整个过程分为三个阶段：即学习，遗忘和回溯。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501223628873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>学习过程：</strong>如虚线框所示，“ L”形光照明（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）和特定的正脉冲（0.1，0.25，0.5V）施加到器件上。</li>
+<li><strong>遗忘过程：</strong>30个相同的负脉冲（−2 V，100 ms）施加到器件。</li>
+<li><strong>回溯过程：</strong>如虚线框所示，全范围光照明（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）和特定的正脉冲（0.1，0.25，0.5V）施加到器件上。</li>
+<li><strong>结果分析：</strong>学习过程之后，被光照射的区域的电导率显著上升，字母“ L”已存储在3×2光电突触阵列上；忘记后，器件电导恢复到初始值；回溯过程中，光照使得六个器件发生了相同的电导变化，但0.1 V的正电压脉冲不会启用存储器回溯功能，施加0.25和0.5 V的正电压脉冲时，回溯过程完成后，在光电突触阵列上很容易观察到字母“ L”，表明此时容易出现回溯功能。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>科研</category>
+      </categories>
+  </entry>
+  <entry>
     <title>记第一个个人博客，基于hexo+GitHub</title>
     <url>/2018/12/28/this%20is%20my%20first%20blog/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="萌生想法"><a href="#萌生想法" class="headerlink" title="萌生想法"></a>萌生想法</h2><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;半年前就有了写博客的想法，于是开始在网上各种找适合自己的博客网站。新浪和简书    之类固然用起来比较方便，但满屏的广告以及推送让人反感，发现随着年龄的增长，反而越来越喜欢简约；博客园，CSDN目前管理的较好，不失为一个好的去处，但却只能发IT相关的博文;再有就是知乎了，但凭目前的水平还不敢去乱发表意见；所以放眼望去，世界之大，却放不下安静的灵魂。<span id="more"></span></p>
-<h2 id="开始行动"><a href="#开始行动" class="headerlink" title="开始行动"></a>开始行动</h2><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;终于下定决心自己搭建私人博客，考虑目前只是发发短文，满足下自己，再有出于经济方面的原因，最终选择hexo+GitHub搭建个人博客，还有域名也就直接利用了GitHub提供的免费域名。</p>
-<h2 id="新的开始"><a href="#新的开始" class="headerlink" title="新的开始"></a>新的开始</h2><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;无论如何，总算也是有个落脚的地了，我的博客就从这里开始了。</p>
-<h2 id="域名更新"><a href="#域名更新" class="headerlink" title="域名更新"></a>域名更新</h2><p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;#2019&#x2F;5&#x2F;6，购买域名并与默认域名进行了关联，以后可通过新域名访问博客站了。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;默认域名：<a href="https://xiaow199611.github.io/">https://xiaow199611.github.io/</a><br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;关联域名：<a href="https://www.xiaow199611.club/">https://www.xiaow199611.club/</a><br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;#2020&#x2F;4&#x2F;26，更换域名。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;更换域名：<a href="https://www.xiaow199611.top/">https://www.xiaow199611.top/</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="萌生想法"><a href="#萌生想法" class="headerlink" title="萌生想法"></a>萌生想法</h2><p>半年前就有了写博客的想法，于是开始在网上各种找适合自己的博客网站。新浪和简书    之类固然用起来比较方便，但满屏的广告以及推送让人反感，发现随着年龄的增长，反而越来越喜欢简约；博客园，CSDN目前管理的较好，不失为一个好的去处，但却只能发IT相关的博文;再有就是知乎了，但凭目前的水平还不敢去乱发表意见；所以放眼望去，世界之大，却放不下安静的灵魂。<span id="more"></span></p>
+<h2 id="开始行动"><a href="#开始行动" class="headerlink" title="开始行动"></a>开始行动</h2><p>终于下定决心自己搭建私人博客，考虑目前只是发发短文，满足下自己，再有出于经济方面的原因，最终选择hexo+GitHub搭建个人博客，还有域名也就直接利用了GitHub提供的免费域名。</p>
+<h2 id="新的开始"><a href="#新的开始" class="headerlink" title="新的开始"></a>新的开始</h2><p>无论如何，总算也是有个落脚的地了，我的博客就从这里开始了。</p>
+<h2 id="域名更新"><a href="#域名更新" class="headerlink" title="域名更新"></a>域名更新</h2><p>#2019&#x2F;5&#x2F;6，购买域名并与默认域名进行了关联，以后可通过新域名访问博客站了。<br>默认域名：<a href="https://xiaow199611.github.io/">https://xiaow199611.github.io/</a><br>关联域名：<a href="https://www.xiaow199611.club/">https://www.xiaow199611.club/</a><br>#2020&#x2F;4&#x2F;26，更换域名。<br>更换域名：<a href="https://www.xiaow199611.top/">https://www.xiaow199611.top/</a></p>
 ]]></content>
       <categories>
         <category>日记</category>
