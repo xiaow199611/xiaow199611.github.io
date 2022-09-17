@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaow's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="研究目的和意义神经网络计算中，需要器件具备多态运算的能力。然而目前的大多数细丝型的忆阻器件的电导都是顺变的，也就是二值化(0,1)；另外一方面，目前报道的缓变器件表现出保持性和一致性差，开关速度慢等特点。在这篇文章中提出了一种新型的器件结构HfOx&#x2F;TEL RRAM   ，能够提高器件的缓变性能，并在1kb的RRAM阵列上表现出优异的缓变开关属性。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="multi-state operations for Neuromorphic Computing">
+<meta property="og:url" content="http://yoursite.com/2020/12/27/multi-state%20operations%20for%20Neuromorphic%20Computing/index.html">
+<meta property="og:site_name" content="Xiaow&#39;s Blog">
+<meta property="og:description" content="研究目的和意义神经网络计算中，需要器件具备多态运算的能力。然而目前的大多数细丝型的忆阻器件的电导都是顺变的，也就是二值化(0,1)；另外一方面，目前报道的缓变器件表现出保持性和一致性差，开关速度慢等特点。在这篇文章中提出了一种新型的器件结构HfOx&#x2F;TEL RRAM   ，能够提高器件的缓变性能，并在1kb的RRAM阵列上表现出优异的缓变开关属性。">
+<meta property="og:locale">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233120727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233152992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233236350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233303563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233331886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233359773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233418143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233439920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233527633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233547405.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233617766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233819686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/img_convert/854a5790f89e0541db7581e90b863319.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233843115.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227233906199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227234002631.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020122723425031.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20201227234306606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-12-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-12-28T06:05:17.793Z">
+<meta property="article:author" content="NMOS&#39;s Blog">
+<meta property="article:tag" content="Physics,Computer Science,Life">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20201227233120727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/12/27/multi-state operations for Neuromorphic Computing/"/>
+
+
+
+
+
+  <title>multi-state operations for Neuromorphic Computing | Xiaow's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiaow's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record life,record growth!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/27/multi-state%20operations%20for%20Neuromorphic%20Computing/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiaow's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">multi-state operations for Neuromorphic Computing</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-27T00:00:00+08:00">
+                2020-12-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index">
+                    <span itemprop="name">科研</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/12/27/multi-state%20operations%20for%20Neuromorphic%20Computing/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/12/27/multi-state%20operations%20for%20Neuromorphic%20Computing/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://img-blog.csdnimg.cn/20201227233120727.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="研究目的和意义"><a href="#研究目的和意义" class="headerlink" title="研究目的和意义"></a><strong>研究目的和意义</strong></h2><p>神经网络计算中，需要器件具备多态运算的能力。然而目前的大多数细丝型的忆阻器件的电导都是顺变的，也就是二值化(0,1)；另外一方面，目前报道的缓变器件表现出保持性和一致性差，开关速度慢等特点。在这篇文章中提出了一种新型的器件结构HfOx&#x2F;TEL RRAM   ，能够提高器件的缓变性能，并在1kb的RRAM阵列上表现出优异的缓变开关属性。<span id="more"></span></p>
+<h2 id="实验部分"><a href="#实验部分" class="headerlink" title="实验部分"></a><strong>实验部分</strong></h2><p><img src="https://img-blog.csdnimg.cn/20201227233152992.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图Fig. 1(a)  为1T1R结构的1kb的RRAM阵列，插图为基本的忆阻器单元。同时制造了两种结构：HfOx&#x2F;Ti RRAM and HfOx&#x2F;TEL RRAM  。忆阻器是制造在晶体管的漏极上的。Fig. 1(b)   为器件的透射的截面图。</p>
+<p>制造过程：晶体管和互连线在CMOS工厂中完成，然后在实验室在晶体管漏极用ALD分别生长TiN底电极和HfOx层，TEL   层通过物理气相沉积的方法生长，最后用溅射生长了顶电极TiN&#x2F;Al ，最后用Cl2&#x2F;BCl3   等离子体刻蚀Al形成Al互连线。</p>
+<p>测量过程：在SET过程，晶体管的源极接地，在RRAM的顶电极施加电压；在RESET过程中，RRAM的顶电极接地，晶体管的源极施加电压。<br><img src="https://img-blog.csdnimg.cn/20201227233236350.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图a和b为HfOx&#x2F;Ti RRAM 在室温下直流和脉冲条件的IV测试。在SET过程中，工作电压从0到1.5V，限流设置为100uA,电流随着工作电压的变化表现出突变；在RESET过程中，电流表现出良好的缓变性能。脉冲测试SET过程中，1.0V&#x2F;50ns SET 脉冲序列施加到RRAM,电导基本不变化，而1.1V&#x2F;50ns SET 脉冲序列施加到RRAM,电导从2.5µS 突变到 55µS  ，并在50µS附近浮动。</p>
+<p>通常来说，导电细丝的生长是由电场和热效应驱动的，图c和d为HfOx&#x2F;Ti RRAM 在150°C  下直流和脉冲条件的IV测试。DC-IV曲线在SET过程中表现出缓变特性，抑制了突变电流。脉冲测试中，电导变化也呈现缓变特性。由此分析由于HfOx层温度的升高，在热效应作用下，突变开关转变为模拟开关，但这对于实际应用是不合适的。<br><img src="https://img-blog.csdnimg.cn/20201227233303563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>通过模拟HfOx&#x2F;TEL 结构 和 HfOx&#x2F;metal 结构的温度分布可以发现，在Switch过程中，与传统的HfOx&#x2F;metal 结构相比，HfOx&#x2F;TEL 结构的局部温度明显增加，并且温差超过100k,应该推断，通过选择一种合适的热增强层可以为器件提供一种与外部施加150度相类似的工作条件。该TEL层作为热增强层，具有比金属低得多的导热性，因此可以很好地限制switching 层中的热量。在这个工作中，选择了TaOx  作为TEL 层，热导率范围为0.03 W·m-1 · K-1 to 15 W·m-1 · K-1  瓦&#x2F;米·开尔文，与HfOx 层相比，导电性更好，因此，即使加了TEL层，器件电流也不会有大的变化。<br><img src="https://img-blog.csdnimg.cn/20201227233331886.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>通过使用HfOx&#x2F;TEL RRAM 结构，由于TEL的存在，器件能够在室温实现良好的缓变特性。由图a所示，HfOx&#x2F;TEL RRAM 的直流IV测试在SET和RESET过程都表现出室温下良好的缓变性能。如图b和c所示，脉冲测试也实现了缓变的电导调制，在SET过程中，在1.2V&#x2F;50ns条件下，RRAM电导基本保持不变，一旦脉冲幅值大于1.2V，电导就会缓慢从 7µS 切换到 80µS ，并且器件在1.3V时表现出良好的缓变特性。在RESET过程中，器件电导在1.5V&#x2F;50ns  脉冲下从100µS缓变到10µS ，器件在50ns 的脉冲下实现了大于10倍的缓变开关特性。如图d所示，对128×8 1T1R  阵列中256个单元器件进行了脉冲测试，大多数器件在相同电压下表现出优异的缓变特性，可以看到，256个单元在1.6V&#x2F;50ns  的脉冲测试下，其平均电导变化呈现优异的平稳缓变特性。<br><img src="https://img-blog.csdnimg.cn/20201227233359773.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图a为256个器件不同SET&#x2F;RESET 脉冲数量下电导统计误差棒，可以发现，由于器件差异，器件在1.6V&#x2F;50ns脉冲下电导变化的差异性随着脉冲数量增加而增加，总体来看，器件电导都是随着脉冲数目的增加而增加的。图b为器件的电导保持特性，可以发现，低电导态会随着时间有轻微的变化，但电导态之间并没有因为这些变化导致交叉，总体而言，器件电导态保持态还是很好的。<br><img src="https://img-blog.csdnimg.cn/20201227233418143.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>原理解释:SET过程的电导突变可以归因于电场的正反馈，随着导电细丝的形成，HfOx 中的局部电场增加并加速了单根导电丝的形成，从而造成电导突变；而TEL层的存在限制了中间层热量散失，并促进了氧空位的均匀分布，从而形成了多丝结构，单根导电细丝的形成和断裂对整体电导的影响并不大，因此电导不会突变。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201227233439920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70"></p>
+<h2 id="研究目的和意义-1"><a href="#研究目的和意义-1" class="headerlink" title="研究目的和意义"></a><strong>研究目的和意义</strong></h2><p>CNN在图像处理相关的任务，如图像识别、图像分割和目标检测中起着至关重要的作用，GPU和加速器被设计出来做图像卷积计算。但是，受限于冯诺依曼体系内存和处理单元的物理分离，导致大量的能耗和单元之间数据变换的大延迟。忆阻器神经网络系统在训练神经网络模型时具有快速和低功耗（存算一体）的优势，然而，目前还没有报道过基于忆阻器Crossbar结构的卷积神经网络，并且，由于良品率低，性能不稳定以及其他不理想的特性，使其在获得与软件训练结果比拟的程度非常有挑战。</p>
+<p>本文报告了一种高良品率，高性能，高一致性的忆阻器阵列，该阵列集成了8个2048个单元的忆阻器阵列，以提高CNN的并行计算效率。构建了基于忆阻器的五层CNN以执行MNIST图像识别，并实现了96.19%以上的高精度。除了使用具有共享输入的不同内核进行并行卷积之外，还演示了忆阻器阵列中多个相同内核的进行不同输入的并行处理。该忆阻器神经网络系统在能耗方面比最新的GPU低两个量级，并能够扩展到更大规模的神经网络。</p>
+<p>该成果预期为深度神经网络和边缘计算提供可行的基于忆阻器的非冯·诺依曼硬件解决方案。</p>
+<h2 id="实验部分-1"><a href="#实验部分-1" class="headerlink" title="实验部分"></a><strong>实验部分</strong></h2><p><img src="https://img-blog.csdnimg.cn/20201227233527633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20201227233547405.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>Figure 1</strong>a 为这个全硬件神经网络的系统结构示意图，<strong>Figure 1</strong>b 忆阻器阵列的PCB板。由图可知，该系统主要由三部分组成：个人主机、Xilinx商用板ZC706和忆阻器阵列的定制PCB板。PE板主要包括8个1024（128 × 16 1T1R cells  ）单元的忆阻器阵列，电压发生器（电压发生器模块为基本的忆阻阵列操作提供编程和读取脉冲），输入输出寄存器以及复用器，ADC和移位寄存器，和加法器，PE板单元主要用于并行的卷积运算，激活函数和池化函数的实现都是在arm内核的微处理器中完成的。Xilinx商用板ZC706可分为两部分，第一部分微ARM内核处理器，它是整个系统的运算核心，整个系统的数据流都是受控于这个处理器的，第二部分为FPGA单元，用于综合Advanced Extensible Interface (AXI4 bus)。  电脑主机中训练神经网络模型并提取权重和偏置数据以及数据集下发到ARM内核处理器，ARM内核处理器负责实现池化，抹零，权重更新等功能，ARM内核处理器接收到权重数据后通过总线和电压发生器对忆阻器阵列进行配置，把权重数据映射到忆阻器阵列中。PE板负责卷积计算并得到计算结果。</p>
+<p>具有双核架构：每个CPU架构，有一个cortex ARM A9内核，有32kb的指令集缓存，32kb的数据缓存，512kb的第二级缓存。同时具有一个可编程逻辑单元。CPU单元和FPGA单元通过中央互连单元连接到外设。<br><img src="https://img-blog.csdnimg.cn/20201227233617766.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图中为忆阻器阵列介绍：忆阻器阵列采用1T1R结构，忆阻器结构为TiN&#x2F;TaOx&#x2F;HfOx&#x2F;<br>TiN。所有的晶体管和主要的金属互连和过孔都是在一个标准的CMOS制造厂制造的，技术节点为130nm。忆阻器阵列和剩下的互连线实在实验室完成。最后刻蚀通孔，沉积铝并形成互连图案。该忆阻器表现出显著的可重复多级电导状态，1024个单元相对于32个独立电导态的累积概率分布（F(X) &#x3D; P(X&lt;&#x3D;x)）。</p>
+<p>实现方法（闭环写入方法）：</p>
+<p>1.编程条件：SET条件为字线电压为VWL &#x3D; 1.8 V，位线电压为VBL &#x3D; 2.0 V（50 ns脉冲）源极线电压为VSL &#x3D; 0V。RESET条件为VWL &#x3D; 4.7 V，VBL &#x3D; 0 V和VSL &#x3D; 1.8 V（50 ns脉冲）。电导等效地由0.2V电压脉冲下的读出电流表示。</p>
+<p>2.对于任何期望电导，将最大编程数设置为500，误差值ΔI设置为±50 nA，从初始态向该器件施加一个脉冲，判断Iread是否在误差范围内，如果是，则该过程结束，否则，施加一个随后的SET或RESET脉冲，在为32个电导目标选择的忆阻器上重复进行了整个过程。<br><img src="https://img-blog.csdnimg.cn/20201227233819686.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>卷积运算过程：<br><img src="https://img-blog.csdnimg.cn/img_convert/854a5790f89e0541db7581e90b863319.png" alt="preview"><br>如图Figure 2a所示，在忆阻器阵列上实现了一个5层的卷积神经网络，使用到MNIST 手写数字集实现数字识别功能。首先，28×  28× 1(weight × height × depth)  的手写数字图片输入到忆阻器阵列中，通过卷积核1 × 3 × 3 × 8 (depth × weight × height × batch)  进行卷积得到C1层26 × 26 × 8(weight × height × depth) ，通过3 × 3的矩阵最大值代替区域进行池化运算（压缩图片），得到S2层26 × 26 × 8(weight × height × depth)，通过8 × 3 × 3 × 12 卷积核 (depth × weight × height × batch) 得到C3层7 × 7 × 12(weight × height × depth)，通过2 × 2的矩阵最大值代替区域进行池化运算（压缩图片），得到S4层4 × 4 × 12(weight × height × depth)，然后展开S4层，即1×192的数组，将该数组传输到全连接层（192×10的矩阵），通过矩阵运算得到10×1的矩阵，再经过激活函数得到10个概率值，最终确定是哪个值。</p>
+<p>卷重映射：9&#x2F;16组成一个3×3的卷积核。所以1 × 3 × 3 × 8  需要72个存储单元（PE1）,即16列，144个存储单元。8 × 3 × 3 × 12（864）   需要192列（PE1和PE3,192× 9&#x3D;1728）,全连接层的矩阵192×10存储在PE5 (120 rows) and PE7 (120 rows)  （240× 16）。</p>
+<p><img src="https://img-blog.csdnimg.cn/20201227233843115.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图Figure 2b为卷积示例：xm_n  代表处于（m,n）的像素点。输入的3 × 3像素块是在卷积过程中不断形成的，如左下图所示。在整个并行计算过程中，所有字线均设置为VWL &#x3D; 4.5 V。位线(BL)脉冲为0.2 V，源线(SL)钳位在0 V。例如xm_n首先被解码成二进制序列，每个时钟来临，输入一位二进制数，取相应的输出电流Ik 进行移位运算，一对源线的差值为一个计算值。</p>
+<p>在典型的卷积神经网络网络中，需要通过反向传播对权重值进行更新，从而达到训练模型的效果。由于良品率低，性能不稳定以及其他不理想的特性，这个目标很难实现。相对于纯粹的原位训练，为了克服各种器件非理性条件，本文中采用了半原位复合训练，即第一步在计算机中进行训练，然后将权重值映射到忆阻器阵列中；全连接层通过反向传播进行权重值训练。<br><img src="https://img-blog.csdnimg.cn/20201227233906199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图Figure 3a和3b，首先在计算机上TensorFlow进行原位的模型训练，训练数据集为55000张，10,000  测试数据集的测试结果为97.99%，这被称为基准精确度。然后将提取的权重值映射到忆阻器阵列中，此时由于忆阻器器件的非理性影响，识别率从97.99%降到95.63%。<br>随后，通过对FC层，C1,C3以及C3和FC层等各种组合进行训练仿真（arch trial  ），可以发现训练FC层对识别率的影响最大。另外，通过实验验证，仅仅需要一个小的子数据集就足够复合训练将准确率提高到基准水平。与实验过程相似，首先将训练好的权值传递到忆阻器PEs中，在传递过程中，用随机值替换10%的目标权值，故意添加一些映射误差;因此，识别正确率降至80.66%。然后从总训练数据集(即55000张训练图像的10%)中随机选取5500张训练图像更新FC层的权值。进行混合训练后，经过10次迭代，正确率提高到94.40%。</p>
+<p>学习和FC权重调整：</p>
+<p>随机梯度下降算法：其思想就是通过随机选取⼩量训练输⼊样本来计算 ∇Cx，进⽽估算梯度 ∇C。通过计算少量样本的平均值我们可以快速得到⼀个对于实际梯度 ∇C 的很好的估算，这有助于加速梯度下降，进⽽加速学习过程。<br><img src="https://img-blog.csdnimg.cn/20201227234002631.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>根据实际需求，在后续试验中使用15态参与运算，由于电导态的数目变小了，其允许的误差也变大，误差值ΔI设置为±100 nA。电导编程态范围:2.5 μS (0.5 μA at a 0.2-V read pulse) up to 20 μS (4 μA at a 0.2-V read pulse) with a constant step of 2.5 μS，-17.5μS 到17.5μS 正好15个态.   </p>
+<p>图Fig. 3c-e是映射完成后忆阻器中C1,C3,FC层的权重分布，误差分布可能来自器件差异性、电导漂移等。经过550次迭代，每次迭代小批量图片为100，对于10000张测试图片的识别误差率从4.39%降到了3.81%。<br><img src="https://img-blog.csdnimg.cn/2020122723425031.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>如Fig. 4a所示，通过三组并行的卷积运算，减小卷积层和全连接层之间的数据吞吐量差距，加快卷积神经网络的运算效率。Fig. 4b-d 为三组权重映射的电导错误率分布，可以发现每个组都不可避免的会出现错误。Fig. 4e 为经过100次迭代（300批图片，共30000张）的原位训练之后电导分布。Fig. 4f 为训练之后电导变化，可以发现经过迭代，错误率有效减少。Fig. 4g表明复合训练之后，测试集的错误率相比于训练之前明显降低。实验数据表明，经过复合训练，对于10000张测试图集的识别正确率从93.86%降至95.83%。<br><img src="https://img-blog.csdnimg.cn/20201227234306606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>为了评估忆阻器基神经形态计算系统的性能，文章提出了与图1相对应的处理器。该处理器包括多个忆阻器单元，每个忆阻器单元包括4个忆阻器核。该忆阻器核具有128 × 128  的忆阻器阵列，并且包括基本的电路，包括驱动，复用器，复用控制器，采样保存模块以及ADC。结合实际的实验数据与用仿真器XPEsim获得仿真数据进行能量性能评估。在忆阻器宏内核中，通过连接两个采样保持模块到阵列的每一列，来提高并行处理速度。每4列共用一个ADC来节约芯片面积和功耗。当以20MHZ的频率向所有行施加1位读取脉冲时，S＆H组之一打开，并连接到源线将电流并行通过ADC转化为电压，在下一位来临时，另一个S＆H打开。8位ADC在1位数据来临时完成4次交互，每次交互消耗2.55 pJ能量，以这种方式，ADC没有空闲期，输入脉冲连续馈入阵列。</p>
+<p>详细的指标，包括能量、延迟和每个块的面积，在扩展数据表1中列出，它表明输入1位读脉冲(0.2 V, 50 ns)的系统性能。在扩展数据表1，通过测量的忆阻器(130 nm技术节点)特性对忆阻相关指标进行评估。通过估算，1位读脉冲(0.2 V, 50 ns)的系统消耗371.89 pJ ，芯片总面积为63,801.94 μm2&#x2F;90.69% &#x3D; 0.0704 mm2 （忆阻器面积效率为90.69%  ） </p>
+<p>因此，如扩展数据表2所示，我们可以通过评估性能，功率，面积，能效和性能密度，在输入8位整数时评估基于忆阻器的神经形态计算系统的指标。</p>
+<p>忆阻器宏：energy efficiency of 11,014 GOP s-1 W-1 and a performance density of 1,164 GOP s-1 mm-2.  </p>
+<p>Tesla V100 GPU ：energy efficiency of 100 GOP s-1 W-1 and performance density of 37 GOP s-1 mm-2 .</p>
+<p>基于忆阻器的神经形态计算系统显示出大约110倍的能源效率和30倍的性能密度。这些结果表明，记忆电阻器并联卷积能够高效地实现较高的识别精度，同时大大加快了mCNN的速度,并且能够很大程度的减小功耗。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/28/this%20is%20my%20first%20blog/" rel="next" title="记第一个个人博客，基于hexo+GitHub">
+                <i class="fa fa-chevron-left"></i> 记第一个个人博客，基于hexo+GitHub
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/09/10/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/" rel="prev" title="Optoelectronic Perovskite Synapses for Neuromorphic Computing">
+                Optoelectronic Perovskite Synapses for Neuromorphic Computing <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/header.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+             
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E7%9B%AE%E7%9A%84%E5%92%8C%E6%84%8F%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">研究目的和意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%83%A8%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">实验部分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E7%9B%AE%E7%9A%84%E5%92%8C%E6%84%8F%E4%B9%89-1"><span class="nav-number">3.</span> <span class="nav-text">研究目的和意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%83%A8%E5%88%86-1"><span class="nav-number">4.</span> <span class="nav-text">实验部分</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NMOS's Blog</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  总浏览量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<span class="post-meta-divider">|</span>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  
+  <script src="/js/src/Valine.min.js"></script>  
+
+    
+  
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tBTzynWAG3imAbF8f1eIFdwQ-gzGzoHsz',
+        appKey: 'Xnx7HCmSRoTHiem8fPK07hOs',
+        placeholder: 'Just say say',
+        avatar:'wavatar',
+        guest_info:['nick','mail'] ,  
+        pageSize:'10' || 10,
+    });
+    
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
+  </script>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

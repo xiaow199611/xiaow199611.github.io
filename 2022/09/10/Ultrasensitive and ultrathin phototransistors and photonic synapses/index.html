@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaow's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="研究目的和意义 1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。 2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。 3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice">
+<meta property="og:url" content="http://yoursite.com/2022/09/10/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/index.html">
+<meta property="og:site_name" content="Xiaow&#39;s Blog">
+<meta property="og:description" content="研究目的和意义 1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。 2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。 3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。">
+<meta property="og:locale">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200430205324123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200430211128360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200430212413250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200430214313718.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200430215943662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200430225141177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501101854275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501103313274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501103931545.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2022-09-10T15:36:22.382Z">
+<meta property="article:modified_time" content="2020-05-02T04:45:22.500Z">
+<meta property="article:author" content="NMOS&#39;s Blog">
+<meta property="article:tag" content="Physics,Computer Science,Life">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/09/10/Ultrasensitive and ultrathin phototransistors and photonic synapses/"/>
+
+
+
+
+
+  <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice | Xiaow's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiaow's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record life,record growth!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/10/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiaow's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-10T23:36:22+08:00">
+                2022-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index">
+                    <span itemprop="name">科研</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/09/10/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/09/10/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<h2 id="研究目的和意义"><a href="#研究目的和意义" class="headerlink" title="研究目的和意义"></a><strong>研究目的和意义</strong></h2><ul>
+<li>1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。</li>
+<li>2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。</li>
+<li>3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。<span id="more"></span></li>
+<li>4.有机-无机卤化物钙钛矿量子点（PQDS）缺点：电荷输运能力低于石墨烯。</li>
+<li><strong>本文：</strong>通过缺陷介导在单层石墨烯晶格中生长溴化亚甲基铅PQDS，实现很高的光生效率。</li>
+<li><strong>原理：</strong>PQDS吸收光并产生载流子，生成的载流子在石墨烯中实现传输。</li>
+<li><strong>结果：</strong>实现同类型的光探测器中性能最好的光响应能力和探测能力；利用光响应特性实现低功耗的artificial synapses并运用于模式识 别。</li>
+</ul>
+<hr>
+<h2 id="实验部分"><a href="#实验部分" class="headerlink" title="实验部分"></a>实验部分</h2><p>**在石墨烯晶格上生长PQDS方法(Figure 1a)：**<strong>配体-辅助再沉积（LARP）</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200430205324123.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>过程：</strong>将抗溶剂甲苯添加到用钙钛矿前驱体旋涂的石墨烯上，由于前驱体过量，在石墨烯表面及甲苯溶液中会形成高浓度的高度无序的球形钙钛矿液滴；在饱和条件下，钙钛矿晶胚在石墨烯和甲苯溶液中形成，并在液滴内转化为稳定的钙钛矿晶核，晶体生长。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200430211128360.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>Figure 1b</strong> 可以发现PQDS在石墨烯层上呈随机分布，石墨烯边缘分布密度较大。</li>
+<li><strong>Figure 1c</strong> 可以发现经过30min的生长过程，非均向成核的PQDS的平均直径为3.1nm，尺寸偏差0.5nm。</li>
+<li><strong>Figure 1d</strong> 可以发现晶面间距为0.27nm，对应于PQDS的201晶面，快速傅里叶变换（FFT）分析证明PQDS区域轴沿着(201)方向，与 Figure 1F中的XRD分析结果相一致。</li>
+<li><strong>Figure 1e</strong> 可以观察到晶格畸变，文章归因于PQDS生长导致的应力，更加证实了PQDS在石墨烯上的生长。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200430212413250.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>Figure 1f</strong> 插图中纯PQDS和GPQDS均表现出相似的XPS峰，证明了GPQDS结晶性良好，GPQDS的峰强度低可归因于石墨烯片上的PQDS浓度低。</li>
+<li><strong>Figure 1g</strong> 拉曼分析表明纯石墨烯具有高质量的单层特性。为测试PQDS在石墨烯上的附着情况，将制备好PQDS涂在石墨烯上，此时发现拉曼光谱信号峰与纯石墨烯一致；在GPQDS的拉曼光谱峰中，G峰稍稍向较低波长移动并出现了D峰，D峰可归结于通常存在于石墨烯片扶手椅边缘的区域边界模式(A1g)。证明PQDS在石墨烯上良好地附着。</li>
+</ul>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20200430214313718.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>Figure 2a</strong> 表明Grown-GPQDS的最大吸收波长为434nm，次最大吸收波长为451nm，两种波长可以归结为两种 直径的PQDS(434nm-smaller,451nm-bigger).PL谱的462nm和479nm峰对应于能带带宽2.6-2.7eV，因此GPQDS可用于制作蓝光探测器。</li>
+<li><strong>Figure 2b</strong> 利用时间依赖单光子计技术（FCSPC）研究了GPQDS的超晶格的激发态动力学。纯PQDS的平均衰减指数为2747ns，GPQDS的平均荧光衰减时间为749ns。（荧光寿命：去掉激发光后分子的荧光强度降到激发时荧光强度的1&#x2F;e所需要的时间），在此观察到的PL淬灭（淬灭表明在荧光过程中，光子产生的数量在很短的时间内衰减或者消失）表明石墨烯为PQDS除了固有的激发态电荷转移通道外，还提供了额外的电荷转移通道。</li>
+</ul>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20200430215943662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>Figure 3A</strong> 示意图，在这个结构中，石墨烯（空穴型）构成载流子输运通道，PQDS作为光吸收材料，电流和电压的关系表现出欧姆行为，光电流随着光照强度的增加而显著增加，其中光晶体管响应率R可表示为：</p>
+<p>$R&#x3D;\frac{J_{photocurrent , density}}{L_{light}}$</p>
+</li>
+<li><p><strong>Figure 3B</strong> Inset 表明在外部光照条件下，GPQDS的光探测能力$D^{\ast }$为4.72$\times10^{15}$J,量子产率为4.08$\times 10^{10}$，其中光探测能力$D^{\ast }$可以表示为：</p>
+<p>$D^{\ast }&#x3D;\frac{RA^{0.5}}{(2qI_{d})^{0.5}}  $ 其中q为电荷的绝对值；A为器件的有效面积；$I_{d}$为暗电流</p>
+<p>Figure 3B为300-700nm波段的R值，在430nm处光响应率达到峰值，与GPQDS的光吸收峰相一致，在430-700nm的R值逐渐下降。该探测器在同类型的探测器中具有最高的光响应。由于单层石墨烯具有超快的复合能力和极低的光吸收能力，所以石墨 烯产生的光电流可忽略，光电流主要由PQDS贡献。</p>
+</li>
+<li><p><strong>Figure 3C,D</strong> 为GPQD的能带图，单层石墨烯的功函数为4.56eV，PQDs的费米能级为4eV，当PQDS生长在石墨烯上时，由于功函数不 匹配导致内建电场产生，方向为PQDs指向石墨烯。</p>
+</li>
+<li><p><strong>Figure 3E</strong> 为$V_{DS}$为500mV时，不同照明条件下背栅电压对电阻的影响。当光强增加时，$V_{Dirac}$(电阻峰值对应电压)由于光闸效应，向高电压方向移动。在光照条件下，PQDS吸收光能量并产生电子空穴对并被内建电场分离，空穴向石墨烯一侧迁移，电子在PQDS中累积，从而使石墨烯中产生空穴电流（相当于在石墨烯上加负电压驱离电子，在石墨烯中吸引空穴），当$V_{BG}&lt; V_{Dirac}$时，石墨烯中空穴占主导，随着电压增加，光电流减小；当$V_{BG}&gt; V_{Dirac}$时，石墨烯中电子占主导，随着电 压增加，光电流增加。</p>
+</li>
+<li><p><strong>Figure 3F</strong> 为不同强度的光照下，光强越强，$V_{Dirac}$的向更大处迁移。</p>
+</li>
+<li><p><strong>Figure 3G</strong> 为不同光强下狄拉克点随入射功率的变化和光电流(Iph &#x3D; Ilight−Idark)相对于零栅电压的变化。</p>
+</li>
+</ul>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20200430225141177.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>Figure4a,b</strong> 为更好的理解电荷输运效应，用COMSOL模拟比较了两种情况：1.PQDS与石墨烯仅仅接触；2.PQDS生长于石墨烯之上。采用费米狄拉克半导体模型建立GPQDS模型，PQDs与石墨烯界面采用连续费米能级，所有几件采用面积为40$\times$40nm的石墨烯薄膜，厚度0.3nm，随机添加15个PQDs,PQDs的尺寸分别为3和5nm，输入波长430nm。</li>
+<li><strong>Figure4c</strong> 为GPQDS的瞬态光响应（白光33mW&#x2F;$cm^{-2}$）,ON 20s, OFF 20s，PPC效应，可用于神经形态光突触和面部识别。</li>
+</ul>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20200501101854275.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>Figure5</strong> 分别为神经元和突触示意图；光强依赖突触可塑性；PPF效应；脉冲数目对电导的影响；10 V的栅偏置下，20个突触前光尖峰触发的归一化电导的变化；LTD和LTP（LTP:长时程增强效应是指条件刺激(一般为短串高频刺激)后,突触传递效应明显增强的现象）；背栅电压对LTP的影响。（A-G $V_{D}$ &#x3D; 0.5V, $V_{G}$&#x3D; 10V）</li>
+</ul>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/20200501103313274.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>面部识别</strong> 对于面部识别，使用了4个人的头像。通过改变光照强度和面角，得到与训练集图像不同的测试数据集，输入神经元的大小为7000，等于一幅人像的总像素(100×70)。输出神经元的大小为10，以达到良好的精度。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501103931545.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>面部识别</strong> 对于MNIST数据集，输入神经元的大小为784(28×28)，输出神经元大小64。MNIST数据集识别结果为各输出神经元的突触权值（如图所示），经过10个epoch后（所有的数据送入网络中完成一次前向计算及反向传播的过程），准确率约为44.1%。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/09/10/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/" rel="next" title="Optoelectronic Perovskite Synapses for Neuromorphic Computing">
+                <i class="fa fa-chevron-left"></i> Optoelectronic Perovskite Synapses for Neuromorphic Computing
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/09/17/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%A4%8D%E4%B9%A0/" rel="prev" title="半导体物理">
+                半导体物理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/header.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+             
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A0%94%E7%A9%B6%E7%9B%AE%E7%9A%84%E5%92%8C%E6%84%8F%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">研究目的和意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E9%83%A8%E5%88%86"><span class="nav-number">2.</span> <span class="nav-text">实验部分</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NMOS's Blog</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  总浏览量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<span class="post-meta-divider">|</span>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  
+  <script src="/js/src/Valine.min.js"></script>  
+
+    
+  
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tBTzynWAG3imAbF8f1eIFdwQ-gzGzoHsz',
+        appKey: 'Xnx7HCmSRoTHiem8fPK07hOs',
+        placeholder: 'Just say say',
+        avatar:'wavatar',
+        guest_info:['nick','mail'] ,  
+        pageSize:'10' || 10,
+    });
+    
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
+  </script>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>

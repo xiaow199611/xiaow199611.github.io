@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaow's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="文章概要及研究意义 1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。 2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。 3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optoelectronic Perovskite Synapses for Neuromorphic Computing">
+<meta property="og:url" content="http://yoursite.com/2022/09/10/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/index.html">
+<meta property="og:site_name" content="Xiaow&#39;s Blog">
+<meta property="og:description" content="文章概要及研究意义 1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。 2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。 3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。">
+<meta property="og:locale">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501200037646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501205936570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501210949959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501212731881.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501215908103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200501223628873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2022-09-10T15:36:22.333Z">
+<meta property="article:modified_time" content="2020-05-02T04:38:23.596Z">
+<meta property="article:author" content="NMOS&#39;s Blog">
+<meta property="article:tag" content="Physics,Computer Science,Life">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/09/10/Optoelectronic Perovskite Synapses for Neuromorphic/"/>
+
+
+
+
+
+  <title>Optoelectronic Perovskite Synapses for Neuromorphic Computing | Xiaow's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiaow's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record life,record growth!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/10/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiaow's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Optoelectronic Perovskite Synapses for Neuromorphic Computing</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-10T23:36:22+08:00">
+                2022-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%A7%91%E7%A0%94/" itemprop="url" rel="index">
+                    <span itemprop="name">科研</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/09/10/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/09/10/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://img-blog.csdnimg.cn/20200501193818880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<h1 id="文章概要及研究意义"><a href="#文章概要及研究意义" class="headerlink" title="文章概要及研究意义"></a><strong>文章概要及研究意义</strong></h1><ul>
+<li>1.该工作基于全无机钙钛矿纳米片实现了二端光电子突触，其中钙钛矿纳米片提供光生载流子，电阻性转换行为是由界面电荷捕获和释放导致的界面势垒演化而来。</li>
+<li>2.实现了对双脉冲易化(PPF)、短期可塑性(STP)、长期可塑性(LTP)、从短期记忆过渡到(STM)到长期记忆(LTM)，以及学习体验行为的模拟。</li>
+<li>3.独特功能：记忆回溯，可以搜索历史的光电子信息，有利于进行神经形态计算。<span id="more"></span></li>
+<li>4.意义：该光电子突触在人工智能，特别是视觉相关的人工智能，计算方面有很好的应用前景。</li>
+</ul>
+<h1 id="结果和讨论"><a href="#结果和讨论" class="headerlink" title="结果和讨论"></a>结果和讨论</h1><h2 id="1-器件设计和表征"><a href="#1-器件设计和表征" class="headerlink" title="1.器件设计和表征"></a>1.器件设计和表征</h2><p><img src="https://img-blog.csdnimg.cn/20200501200037646.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>Figure 1a</strong> 为器件结构示意图：二端ITO&#x2F;PEDOT:PSS&#x2F;CuSCN(硫氰酸亚铜)&#x2F; CsPbBr3 PNs（Perovskite nanoplates）&#x2F;Au结构。其中电导变化主要由PEDOT:PSS&#x2F;CuSCN界面对电荷的俘获和释放造成，PNs提供光效应。通过旋涂工艺将三个功能层依次沉积在图案化的ITO涂层玻璃的表面上，Au电极通过热蒸发制备。</p>
+</li>
+<li><p><strong>Figure 1b</strong> 通过XRD可知，通过high-temperature injection method制备的全无机CsPbBr3 perovskite nanoplates具有良好的结晶性。峰2θ&#x3D; 14.7°和30.5°对应斜方晶系的CsPbBr3的(001)和(002)衍射峰,表明成功合成CsPbBr3 PNs。</p>
+</li>
+<li><p><strong>Figure 1c</strong> 为CsPbBr3 PNs的光致发光（PL）和吸收光谱。 在PL光谱中，合成后的CsPbBr3 PNs在490 nm处有一个发光峰，插图显示CsPbBr3 PN在365 nm紫外线（UV）激发下发出均匀且稳定的蓝绿色光；CsPbBr3 PNs的吸收光谱中的吸收峰位于470 nm，由于斯托克斯位移，来自CsPbBr3 PNs的吸收光谱中的吸收峰位于470 nm，与发光峰相比，蓝移为20 nm。</p>
+</li>
+<li><p><strong>Figure 1d</strong> 为CsPbBr3 PNs的TEM图像。由图可知，合成后的CsPbBr3 PNs分布均匀且大小均匀，平均大小为20–25 nm，直立的PNs平均厚度为3-5 nm。</p>
+</li>
+<li><p><strong>Figure 1e,f</strong> 为聚焦离子束切割的横截面TEM图像。样品表面喷涂金和铂以保护样品和使用TEM便于观察，由图可知CsPbBr3 PNs薄层的厚度为6–8 nm。</p>
+<h2 id="2-电突触可塑性"><a href="#2-电突触可塑性" class="headerlink" title="2.电突触可塑性"></a>2.电突触可塑性</h2></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501205936570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>Figure 2a</strong> 插图为光电突触的光学照片(4 × 4 crossbar structure)，外部电压施加于ITO底部电极，Au电极接地。连续施加15个双正电压扫描(0$\rightarrow$1.5$\rightarrow$0 V)的器件电流如图1所示，随着电压扫频次数的增加，器件的电导不断增大并趋于饱和。</li>
+<li><strong>Figure s4</strong> 当连续15次出现双负电压扫描时(0$\rightarrow$−1.5$\rightarrow$0 V)，器件电导随负电流的变化很小。</li>
+<li><strong>Figure 2b</strong> 但是，有15个连续应用双重负数电压扫描(0$\rightarrow$−1.5$\rightarrow$0 V)可以使器件其恢复到原始状态并在正电压偏置下展现其原始电学性能。</li>
+<li><strong>Figure 2c</strong> 施加20个相同的正脉冲（1.5 V，100 ms），然后再施加20个相同的负脉冲（-1.5 V，100 ms），脉冲间隔为1 s，在每个脉冲后，通过0.1 V读取电压测量电流，可以看到经典的增强和抑制过程，这表明器件表现出出色的电子突触可塑性。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501210949959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>Figure 2d</strong> PPF效应，良好的拟合结果表明器件具有模仿生物突触的PPF效果的良好潜力。</p>
+</li>
+<li><p><strong>Figure 2e</strong> 脉冲（2 V，100 ms）和读取脉冲（0.1 V）的固定,刺激脉冲N的数量控制在30-100之间,随着刺激脉冲数量的增加，突触重量逐渐增加。当N &#x3D; 30时，600 s后的突触重量减少到50％;但是当N逐渐增加到100时，600 s后的突触重量可以保持在近80％。这些结果表明，通过增加刺激脉冲的数量，可以在器件中实现从STM到LTM的过渡。</p>
+</li>
+<li><p><strong>Figure 2f</strong> 激励电压越强以及脉冲数目越多，PEDOT：PSS &#x2F; CuSCN界面倾向于捕获更多的电荷，从而导致器件的更大的电导变化。</p>
+<h2 id="3-光突触可塑性"><a href="#3-光突触可塑性" class="headerlink" title="3.光突触可塑性"></a>3.光突触可塑性</h2></li>
+<li><p>对于光子突触可塑性，其电阻切换机制类似于电切换（归因于PEDOT：PSS &#x2F; CuSCN接口上的电荷捕获和释放）。不同之处在于，光切换捕获的电荷主要来自CsPbBr3 PNs上电子空穴对的分离，以实现光子突触可塑性。</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501212731881.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>Figure 3a</strong> 光突触可塑性实验装置，UV light（371nm），器件电流使用较小的读取电压脉冲进行测量（振幅：0.1 V；宽度：0.1 s；频率：1 Hz）。</p>
+</li>
+<li><p><strong>Figure 3b</strong> PPC效应。</p>
+</li>
+<li><p><strong>Figure 3c,d</strong> PPF效应。脉冲光刺激引起的PPF与在生物突触中观察到的结果相一致，表明器件具有良好的模拟光子突触的潜力。</p>
+</li>
+<li><p><strong>Figure 3e</strong> 光强依赖可塑性。相同的照明时间，光强度越强，测量电流的越大。电子-空穴对的分离是由CsPbBr3 PNs接收的光照产生的，更强的照明意味着更高的分离效率，进而导致PEDOT：PSS &#x2F; CuSCN界面处的电荷俘获效率提高。</p>
+</li>
+<li><p><strong>Figure 3f</strong> 光照时长依赖可塑性。对于相同的照明强度，测量电流随着照明时间的增加而逐渐增加。</p>
+<h2 id="4-Learning-Experience-Behavior"><a href="#4-Learning-Experience-Behavior" class="headerlink" title="4.Learning-Experience Behavior"></a>4.Learning-Experience Behavior</h2></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501215908103.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><p><strong>光电耦合作用对器件的影响：</strong>固定了6.7 mW&#x2F;$cm^{-2}$ 的施加光强度和10 s的照明时间，通过调整光电耦合作用研究了器件的基本特性,每次测试后，通过施加30个相同的负脉冲（−2 V，100 ms），确保器件返回其初始电导状态。</p>
+</li>
+<li><p><strong>Figure 4a,b,c</strong> 无论外部电压脉冲的幅度为0.1、0.25或0.5 V（宽度0.1 s；频率2 Hz），在第一次照明时，器件电导的变化基本上是相同的，即小振幅电压脉冲不会改变器件的电导率，电导的变化基本上是由光照驱动的，因此在三个不同幅度的电压幅值下，观察到的电导变化基本相同，但是反复测试发现，较大的外部偏置电压会导致后续测量期间器件的电导增加更大。文章认为，外部电压脉冲（&lt;0.5 V）不会改变器件的电导率，即PEDOT：PSS &#x2F; CuSCN接口的电荷陷阱，但是，较大的外部电压会导致大量由CsPbBr3 PNs分离的光生电荷被CuSCN功能层捕获，尽管所施加的负电压脉冲会消除PEDOT：PSS &#x2F; CuSCN界面处的俘获电荷，使设备电导返回其原始状态，但它们并不能完全消除CuSCN功能层的俘获电荷，下次光脉冲电荷来临，形成电荷累积，从而加快了我们设备的电导率。</p>
+</li>
+<li><p><strong>Figure 4d</strong> 从生物学上讲，人类可以通过学习逐渐掌握对某事物的认知，并且随着时间的流逝，这种认知将逐渐被遗忘，但是当人再次学习相同的事物时，达到相同的认知水平将需要更少的时间。图4d中，将0.5 V的外部电压脉冲和间歇光照施加到器件中。 第一个光照（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）使器件电导从17 µS增加到39 µS，用时6.8s，停止光照一段时间后，器件电导衰减到30 µS；第二次光照（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）使器件电导重新增加到39 µS，仅用时1.6s。</p>
+</li>
+</ul>
+<h2 id="5-Memory-Backtracking-Function"><a href="#5-Memory-Backtracking-Function" class="headerlink" title="5.Memory Backtracking Function"></a>5.Memory Backtracking Function</h2><ul>
+<li>回溯功能中，将整个过程分为三个阶段：即学习，遗忘和回溯。</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200501223628873.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<ul>
+<li><strong>学习过程：</strong>如虚线框所示，“ L”形光照明（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）和特定的正脉冲（0.1，0.25，0.5V）施加到器件上。</li>
+<li><strong>遗忘过程：</strong>30个相同的负脉冲（−2 V，100 ms）施加到器件。</li>
+<li><strong>回溯过程：</strong>如虚线框所示，全范围光照明（强度6.7 mW&#x2F;$cm^{-2}$，照明时间10 s）和特定的正脉冲（0.1，0.25，0.5V）施加到器件上。</li>
+<li><strong>结果分析：</strong>学习过程之后，被光照射的区域的电导率显著上升，字母“ L”已存储在3×2光电突触阵列上；忘记后，器件电导恢复到初始值；回溯过程中，光照使得六个器件发生了相同的电导变化，但0.1 V的正电压脉冲不会启用存储器回溯功能，施加0.25和0.5 V的正电压脉冲时，回溯过程完成后，在光电突触阵列上很容易观察到字母“ L”，表明此时容易出现回溯功能。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/12/27/multi-state%20operations%20for%20Neuromorphic%20Computing/" rel="next" title="multi-state operations for Neuromorphic Computing">
+                <i class="fa fa-chevron-left"></i> multi-state operations for Neuromorphic Computing
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/09/10/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/" rel="prev" title="Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice">
+                Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/header.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+             
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%A6%82%E8%A6%81%E5%8F%8A%E7%A0%94%E7%A9%B6%E6%84%8F%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">文章概要及研究意义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C%E5%92%8C%E8%AE%A8%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">结果和讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%99%A8%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%92%8C%E8%A1%A8%E5%BE%81"><span class="nav-number">2.1.</span> <span class="nav-text">1.器件设计和表征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%94%B5%E7%AA%81%E8%A7%A6%E5%8F%AF%E5%A1%91%E6%80%A7"><span class="nav-number">2.2.</span> <span class="nav-text">2.电突触可塑性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%85%89%E7%AA%81%E8%A7%A6%E5%8F%AF%E5%A1%91%E6%80%A7"><span class="nav-number">2.3.</span> <span class="nav-text">3.光突触可塑性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Learning-Experience-Behavior"><span class="nav-number">2.4.</span> <span class="nav-text">4.Learning-Experience Behavior</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Memory-Backtracking-Function"><span class="nav-number">2.5.</span> <span class="nav-text">5.Memory Backtracking Function</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NMOS's Blog</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  总浏览量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<span class="post-meta-divider">|</span>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  
+  <script src="/js/src/Valine.min.js"></script>  
+
+    
+  
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tBTzynWAG3imAbF8f1eIFdwQ-gzGzoHsz',
+        appKey: 'Xnx7HCmSRoTHiem8fPK07hOs',
+        placeholder: 'Just say say',
+        avatar:'wavatar',
+        guest_info:['nick','mail'] ,  
+        pageSize:'10' || 10,
+    });
+    
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
+  </script>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
