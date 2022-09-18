@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-09-17T13:39:51.218Z</updated>
+  <updated>2022-09-18T16:12:01.138Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>神经网络与深度学习-持续更新</title>
+    <link href="http://yoursite.com/2022/09/18/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yoursite.com/2022/09/18/神经网络与深度学习/</id>
+    <published>2022-09-17T16:00:00.000Z</published>
+    <updated>2022-09-18T16:12:01.138Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在⼈类的每个脑半球中，有着⼀个初级视觉⽪层，常称为 V1，包含 1 亿 4 千万个神经元及数百亿条神经元间的连接。但是⼈类视觉不是就只有 V1，还包括整个视觉⽪层  V2、 V3、 V4 和 V5 他们逐步地进⾏更加复杂的图像处理。神经网络中通过获取大量的训练样本，然后开发出一个可以从这些训练样本中进行学习的系统，最终实现使用样本推断出识别数字的规则。
+    
+    </summary>
+    
+      <category term="笔记" scheme="http://yoursite.com/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>半导体物理</title>
     <link href="http://yoursite.com/2022/09/17/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%A4%8D%E4%B9%A0/"/>
     <id>http://yoursite.com/2022/09/17/半导体物理复习/</id>
     <published>2022-09-16T16:00:00.000Z</published>
-    <updated>2022-09-17T13:39:51.218Z</updated>
+    <updated>2022-09-18T16:12:06.690Z</updated>
     
     <summary type="html">
     
@@ -54,28 +72,6 @@
   </entry>
   
   <entry>
-    <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</title>
-    <link href="http://yoursite.com/2020/05/02/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/"/>
-    <id>http://yoursite.com/2020/05/02/Ultrasensitive and ultrathin phototransistors and photonic synapses/</id>
-    <published>2020-05-01T16:00:00.000Z</published>
-    <updated>2022-09-17T13:39:42.954Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;研究目的和意义&quot;&gt;&lt;a href=&quot;#研究目的和意义&quot; class=&quot;headerlink&quot; title=&quot;研究目的和意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;研究目的和意义&lt;/strong&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。&lt;/li&gt;
-&lt;li&gt;2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。&lt;/li&gt;
-&lt;li&gt;3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。
-    
-    </summary>
-    
-      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Optoelectronic Perovskite Synapses for Neuromorphic Computing</title>
     <link href="http://yoursite.com/2020/05/02/Optoelectronic%20Perovskite%20Synapses%20for%20Neuromorphic/"/>
     <id>http://yoursite.com/2020/05/02/Optoelectronic Perovskite Synapses for Neuromorphic/</id>
@@ -98,11 +94,33 @@
   </entry>
   
   <entry>
+    <title>Ultrasensitive and ultrathin phototransistors and photonic synapses using perovskite quantum dots grown from graphene lattice</title>
+    <link href="http://yoursite.com/2020/05/02/Ultrasensitive%20and%20ultrathin%20phototransistors%20and%20photonic%20synapses/"/>
+    <id>http://yoursite.com/2020/05/02/Ultrasensitive and ultrathin phototransistors and photonic synapses/</id>
+    <published>2020-05-01T16:00:00.000Z</published>
+    <updated>2022-09-17T13:39:42.954Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200430202624672.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW93Xw==,size_16,color_FFFFFF,t_70&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;研究目的和意义&quot;&gt;&lt;a href=&quot;#研究目的和意义&quot; class=&quot;headerlink&quot; title=&quot;研究目的和意义&quot;&gt;&lt;/a&gt;&lt;strong&gt;研究目的和意义&lt;/strong&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;1.石墨烯的优点：宽光谱范围，优异的载流子输运特性（高迁移率），高稳定性，好的灵活性。&lt;/li&gt;
+&lt;li&gt;2.石墨烯的缺点：单层石墨烯光吸收率很低，制备的石墨烯光探测器响应性能低。&lt;/li&gt;
+&lt;li&gt;3.有机-无机卤化物钙钛矿量子点（PQDS）优点：在可见光谱上的带宽具有可调节性；高的光致发光量子产率；窄 的发射谱；高消光系数。
+    
+    </summary>
+    
+      <category term="科研" scheme="http://yoursite.com/categories/%E7%A7%91%E7%A0%94/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>记第一个个人博客，基于hexo+GitHub</title>
     <link href="http://yoursite.com/2018/12/28/this%20is%20my%20first%20blog/"/>
     <id>http://yoursite.com/2018/12/28/this is my first blog/</id>
     <published>2018-12-27T16:00:00.000Z</published>
-    <updated>2022-09-17T13:49:13.011Z</updated>
+    <updated>2022-09-18T16:13:04.615Z</updated>
     
     <summary type="html">
     

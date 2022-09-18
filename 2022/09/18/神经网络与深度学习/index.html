@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Xiaow's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="在⼈类的每个脑半球中，有着⼀个初级视觉⽪层，常称为 V1，包含 1 亿 4 千万个神经元及数百亿条神经元间的连接。但是⼈类视觉不是就只有 V1，还包括整个视觉⽪层  V2、 V3、 V4 和 V5 他们逐步地进⾏更加复杂的图像处理。神经网络中通过获取大量的训练样本，然后开发出一个可以从这些训练样本中进行学习的系统，最终实现使用样本推断出识别数字的规则。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="神经网络与深度学习-持续更新">
+<meta property="og:url" content="http://yoursite.com/2022/09/18/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Xiaow&#39;s Blog">
+<meta property="og:description" content="在⼈类的每个脑半球中，有着⼀个初级视觉⽪层，常称为 V1，包含 1 亿 4 千万个神经元及数百亿条神经元间的连接。但是⼈类视觉不是就只有 V1，还包括整个视觉⽪层  V2、 V3、 V4 和 V5 他们逐步地进⾏更加复杂的图像处理。神经网络中通过获取大量的训练样本，然后开发出一个可以从这些训练样本中进行学习的系统，最终实现使用样本推断出识别数字的规则。">
+<meta property="og:locale">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/5d33b0b5e7b546ff8087c44c8ebd995c.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7c7cc16f713f4e3fb3f278e72c476d64.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/37f53e05f598433b8cc7ae844b1ae358.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/5fee063daed44f469e5efaba6ec9c491.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/8ac68319a3ac459cbb06a109dfe5ea0e.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/15ed7d736ea240049dcc0a74ad59852d.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/6a5262e208814649b34b41b9c8ee1a6b.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/16f59e6c15a84a2d801095efdfa0728c.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/56c4a748c12f4b2a9ffb7c464c495f77.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/212a4da7af954dceb6c70ec8d7b8c299.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/e68b79ee0e72448f8c5442c3293505d3.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/7232ce8cf1eb492c8c26e2de8b1cee48.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/fdf48905a82e431481099cab8640e8e1.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/9a8473b1ddb741ea8ccf02e83cb2c53f.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/ebde6e9937cd483c9e68b59362418be5.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/40da6f5c48364458a3f75aa0e172a466.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/1376b242542d4e47ad0676ffd3fd711a.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/dfc1f32ed4b14e1f96f211207b69b12b.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/e2494caf9da34654b8693bf0d6dbf6c4.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/1de70aa3d82c4133a825b09125c20395.gif">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/a1c7bc16f1ff4d29a79fb4a18121d97f.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/0a553b3a7b374de399a4630a4b87e65d.png">
+<meta property="article:published_time" content="2022-09-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-18T16:12:01.138Z">
+<meta property="article:author" content="NMOS&#39;s Blog">
+<meta property="article:tag" content="Physics,Computer Science,Life">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/5d33b0b5e7b546ff8087c44c8ebd995c.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+<script>
+    (function(){
+        if('123456'){
+            if (prompt('请输入密码') !== '123456'){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+  <link rel="canonical" href="http://yoursite.com/2022/09/18/神经网络与深度学习/"/>
+
+
+
+
+
+  <title>神经网络与深度学习-持续更新 | Xiaow's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 6.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Xiaow's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Record life,record growth!</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/09/18/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Xiaow's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">神经网络与深度学习-持续更新</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-09-18T00:00:00+08:00">
+                2022-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/09/18/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/09/18/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在⼈类的每个脑半球中，有着⼀个初级视觉⽪层，常称为 V1，包含 1 亿 4 千万个神经元及数百亿条神经元间的连接。但是⼈类视觉不是就只有 V1，还包括整个视觉⽪层  V2、 V3、 V4 和 V5 他们逐步地进⾏更加复杂的图像处理。神经网络中通过获取大量的训练样本，然后开发出一个可以从这些训练样本中进行学习的系统，最终实现使用样本推断出识别数字的规则。<span id="more"></span><br><img src="https://img-blog.csdnimg.cn/5d33b0b5e7b546ff8087c44c8ebd995c.png" alt="在这里插入图片描述"></p>
+<h2 id="神经网络的结构："><a href="#神经网络的结构：" class="headerlink" title="神经网络的结构："></a>神经网络的结构：</h2><p><img src="https://img-blog.csdnimg.cn/7c7cc16f713f4e3fb3f278e72c476d64.png" alt="在这里插入图片描述"><br>神经网络由输入神经元，隐藏层，输出层组成：如果图像是⼀个 64 × 64 的灰度图像，那么我们会需要4096&#x3D; 64 × 64 个输⼊神经元，每个强度取 0 和 1 之间合适的值。输出层只需要包含⼀个神经元，当输出值⼩于 0.5 时表⽰“输⼊图像不是⼀个 9”，⼤于 0.5 的值表⽰“输⼊图像是⼀个 9”。</p>
+<h2 id="感知器："><a href="#感知器：" class="headerlink" title="感知器："></a>感知器：</h2><p><img src="https://img-blog.csdnimg.cn/37f53e05f598433b8cc7ae844b1ae358.png" alt="在这里插入图片描述"><br><strong>S神经元：</strong> 由于感知器是二值输出，网络中单个感知器上的一个权重或者偏置的微小改动可能引起该感知器的结果完全翻转，如从0到1。这使得逐步修改权重和偏置来让网络接近期望行为变得很困难，所以引入S函数。<br><img src="https://img-blog.csdnimg.cn/5fee063daed44f469e5efaba6ec9c491.png" alt="在这里插入图片描述"></p>
+<h2 id="手写数字识别神经网络："><a href="#手写数字识别神经网络：" class="headerlink" title="手写数字识别神经网络："></a>手写数字识别神经网络：</h2><p><img src="https://img-blog.csdnimg.cn/8ac68319a3ac459cbb06a109dfe5ea0e.png" alt="在这里插入图片描述"><br>网络输入层包含输入像素的值进行编码的神经元，图像为灰度级的，0.0表示白色，1.0表示黑色，中间值表示逐渐暗淡的灰色。中间隐藏层使用15个神经元，输出为10个神经元。<br><img src="https://img-blog.csdnimg.cn/15ed7d736ea240049dcc0a74ad59852d.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/6a5262e208814649b34b41b9c8ee1a6b.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/16f59e6c15a84a2d801095efdfa0728c.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/56c4a748c12f4b2a9ffb7c464c495f77.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/212a4da7af954dceb6c70ec8d7b8c299.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/e68b79ee0e72448f8c5442c3293505d3.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/7232ce8cf1eb492c8c26e2de8b1cee48.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/fdf48905a82e431481099cab8640e8e1.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/9a8473b1ddb741ea8ccf02e83cb2c53f.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/ebde6e9937cd483c9e68b59362418be5.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/40da6f5c48364458a3f75aa0e172a466.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/1376b242542d4e47ad0676ffd3fd711a.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/dfc1f32ed4b14e1f96f211207b69b12b.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/e2494caf9da34654b8693bf0d6dbf6c4.png" alt="在这里插入图片描述"></p>
+<h2 id="代码分析："><a href="#代码分析：" class="headerlink" title="代码分析："></a>代码分析：</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f = gzip.open(&#x27;../data/mnist.pkl.gz&#x27;, &#x27;rb&#x27;)</span><br><span class="line">training_data, validation_data, test_data = cPickle.load(f)</span><br><span class="line">f.close()</span><br><span class="line">return (training_data, validation_data, test_data)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/1de70aa3d82c4133a825b09125c20395.gif" alt="在这里插入图片描述"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">load_data_wrapper()函数的作用：转换数据格式。</span><br><span class="line">*/</span><br><span class="line">def load_data_wrapper():</span><br><span class="line">    //load_data_wrapper()函数首先接收mnist.pkl数据为tr_d, va_d, te_d。</span><br><span class="line">    tr_d, va_d, te_d = load_data()</span><br><span class="line">    //对于tr_d[0]中(5000,784)数组进行reshape，生成5000个(784,1)的数组列表。</span><br><span class="line">    //对于tr_d[1]中(5000, )数组，生成5000个(10,1)的数组列表。</span><br><span class="line">    //zip(training_inputs, training_results)生成5000个([784,1],[10,1])的数组元组。</span><br><span class="line">    training_inputs = [np.reshape(x, (784, 1)) for x in tr_d[0]]</span><br><span class="line">    training_results = [vectorized_result(y) for y in tr_d[1]]</span><br><span class="line">    training_data = zip(training_inputs, training_results)</span><br><span class="line">    validation_inputs = [np.reshape(x, (784, 1)) for x in va_d[0]]</span><br><span class="line">    validation_data = zip(validation_inputs, va_d[1])</span><br><span class="line">    test_inputs = [np.reshape(x, (784, 1)) for x in te_d[0]]</span><br><span class="line">    test_data = zip(test_inputs, te_d[1])</span><br><span class="line">    return (training_data, validation_data, test_data)</span><br><span class="line">/*</span><br><span class="line">vectorized_result(j)函数的作用：生成一个10行1列的数组，并将第j个元素置1，然后返回该数组。</span><br><span class="line">*/</span><br><span class="line">def vectorized_result(j):</span><br><span class="line">    e = np.zeros((10, 1))</span><br><span class="line">    e[j] = 1.0</span><br><span class="line">    return e</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//定义神经网络的类</span><br><span class="line">/*</span><br><span class="line">(1)def __ init__(self, sizes):创建实例时，用内置方法__ init__将这个类的属性绑定上去。self用于存放设置参数,在内嵌时必须放在第一位。传值时不需要传 self, python解释器会自己传进去。</span><br><span class="line">(2)i for i in range(2),输出[0,1]。np.random.randn(y,1)for y in sizes[1:],即y的值是从列表sizes中是的第二个元素开始遍历的，如sizes=[784,30,10],则sizes[1:]的输出为[30,10]。</span><br><span class="line">(3)randn是Numpy库中用于生成标准正态分布数据的函数，randn(3,1)输出结果为3X1的随机数矩阵试验。</span><br><span class="line">np.random.randn(3, 1) = array([[ 1.33160979],[ 0.66314905][ 0.27303603]])</span><br><span class="line">(4)zip()是Python的一个内建函数，它接收一系列可迭代的对象如两个list，并将对象中的元素打包成一个元组(tuple)，并返回有元组组成的列表。如：zip([3, 4], [5, 9])的输出为[(3, 5), (4, 9)]，所以for x, y in zip([3, 4], [5, 9])的输出为for x,y in [(3, 5), (4, 9)],所以x取3,5；y取4,9。</span><br><span class="line">(5)sizes[:-1]为sizes[0]-到最后一个元素之前的数。</span><br><span class="line">(6)因此当sizes=[784,30,10]时：self.biases = [np.random.randn(y, 1) for y in sizes[1:]]输出结果为随机矩阵[np.random.randn(30, 1) ，[np.random.randn(10, 1)];zip(sizes[:-1], sizes[1:])=zip([784,30],[30:10])=[(784,30),(30,10)],self.weights = [np.random.randn(y, x) for x, y in zip(sizes[:-1], sizes[1:])]输出结果为：随机矩阵[np.random.randn(30, 784) ，[np.random.randn(10, 30)]</span><br><span class="line">*/</span><br><span class="line">class Network(object):</span><br><span class="line">    def __init__(self, sizes):</span><br><span class="line">        self.num_layers = len(sizes)</span><br><span class="line">        self.sizes = sizes</span><br><span class="line">        self.biases = [np.random.randn(y, 1) for y in sizes[1:]]</span><br><span class="line">        self.weights = [np.random.randn(y, x)</span><br><span class="line">                        for x, y in zip(sizes[:-1], sizes[1:])]                   </span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">feedforward(self,a)函数作用：前向传播，实现每一层的w.a+b。zip([3, 4], [5, 9])的输出为[(3, 5), (4, 9)]，所以for x, y in zip([3, 4], [5, 9])的输出为for x,y in [(3, 5), (4, 9)],所以x取3,5；y取4,9这里a取[n,1]的矩阵，self.biases=[b0,b1],self.weights= [w0,w1]。</span><br><span class="line">*/</span><br><span class="line">def feedforward(self, a):</span><br><span class="line">    &quot;&quot;&quot;Return the output of the network if ``a`` is input.&quot;&quot;&quot;</span><br><span class="line">    for b, w in zip(self.biases, self.weights):</span><br><span class="line">        a = sigmoid(np.dot(w, a)+b)</span><br><span class="line">    return a</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">(1)SGD接收的参数有：training_data(训练数据集)，epochs(迭代次数)，mini_batch_size(批量)，eta(学习速率)以及test_data。</span><br><span class="line">(2)if test_data: n_test = len(test_data);n = len(training_data),如果测试数据集存在，使用len()函数测试数据集的长度。</span><br><span class="line">(3)random.shuffle用于随机打乱training_data数据集。</span><br><span class="line">(4)training_data[k:k+mini_batch_size]用于将数据打乱后拆分成若干个批量(mini_batch)，每个batch的大小由mini_batch_size决定。以mini_batch_size=10为例：for k in xrange(0, n, mini_batch_size)]=for k in xrange(0, 5000, 10)]，输出k=0,10,20...4990；training_data[k:k+mini_batch_size]=training_data[0:10],training_data[10:20],...,training_data[4990:5000]</span><br><span class="line">(5)update_mini_batch()其实是在函数体内计算出、并更新了 w和 b的值，后续作详细介绍。</span><br><span class="line">(6)在每次迭代后，如果test_data不为空，则使用evaluate(test_data)方法对本轮结果进行评估，后续对evaluate()做详述；如果test_data为空，则直接打印本次迭代完成。</span><br><span class="line">*/</span><br><span class="line">    def SGD(self, training_data, epochs, mini_batch_size, eta, test_data=None):</span><br><span class="line">            if test_data: n_test = len(test_data)</span><br><span class="line">            n = len(training_data)</span><br><span class="line">            for j in xrange(epochs):</span><br><span class="line">                random.shuffle(training_data)</span><br><span class="line">                mini_batches = [</span><br><span class="line">                    training_data[k:k+mini_batch_size]</span><br><span class="line">                    for k in xrange(0, n, mini_batch_size)]</span><br><span class="line">                for mini_batch in mini_batches:</span><br><span class="line">                    self.update_mini_batch(mini_batch, eta)</span><br><span class="line">                if test_data:</span><br><span class="line">                    print &quot;Epoch &#123;0&#125;: &#123;1&#125; / &#123;2&#125;&quot;.format(</span><br><span class="line">                        j, self.evaluate(test_data), n_test)</span><br><span class="line">                else:</span><br><span class="line">                    print &quot;Epoch &#123;0&#125; complete&quot;.format(j)</span><br><span class="line">              </span><br><span class="line">	def update_mini_batch(self, mini_batch, eta):</span><br><span class="line">		nabla_b = [np.zeros(b.shape) for b in self.biases]</span><br><span class="line">		nabla_w = [np.zeros(w.shape) for w in self.weights]</span><br><span class="line">		for x, y in mini_batch:</span><br><span class="line">    		delta_nabla_b, delta_nabla_w = self.backprop(x, y)</span><br><span class="line">    		nabla_b = [nb+dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]</span><br><span class="line">    		nabla_w = [nw+dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]</span><br><span class="line">        self.weights = [w-(eta/len(mini_batch))*nw</span><br><span class="line">                    for w, nw in zip(self.weights, nabla_w)]</span><br><span class="line">        self.biases = [b-(eta/len(mini_batch))*nb</span><br><span class="line">                   for b, nb in zip(self.biases, nabla_b)]</span><br><span class="line">              </span><br><span class="line">   def backprop(self, x, y):</span><br><span class="line">        nabla_b = [np.zeros(b.shape) for b in self.biases]</span><br><span class="line">        nabla_w = [np.zeros(w.shape) for w in self.weights]</span><br><span class="line">        # feedforward</span><br><span class="line">        activation = x</span><br><span class="line">        activations = [x] # list to store all the activations, layer by layer</span><br><span class="line">        zs = [] # list to store all the z vectors, layer by layer</span><br><span class="line">        for b, w in zip(self.biases, self.weights):</span><br><span class="line">            z = np.dot(w, activation)+b</span><br><span class="line">            zs.append(z)</span><br><span class="line">            activation = sigmoid(z)</span><br><span class="line">            activations.append(activation)</span><br><span class="line">        # backward pass</span><br><span class="line">        delta = self.cost_derivative(activations[-1], y) * \</span><br><span class="line">            sigmoid_prime(zs[-1])</span><br><span class="line">        nabla_b[-1] = delta</span><br><span class="line">        nabla_w[-1] = np.dot(delta, activations[-2].transpose())</span><br><span class="line">        for l in xrange(2, self.num_layers):</span><br><span class="line">            z = zs[-l]</span><br><span class="line">            sp = sigmoid_prime(z)</span><br><span class="line">            delta = np.dot(self.weights[-l+1].transpose(), delta) * sp</span><br><span class="line">            nabla_b[-l] = delta</span><br><span class="line">            nabla_w[-l] = np.dot(delta, activations[-l-1].transpose())</span><br><span class="line">        return (nabla_b, nabla_w)</span><br><span class="line">/*</span><br><span class="line">cost_derivative函数功能：实现a-y</span><br><span class="line">*/</span><br><span class="line">    def cost_derivative(self, output_activations, y):</span><br><span class="line">        return (output_activations-y)</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/a1c7bc16f1ff4d29a79fb4a18121d97f.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/0a553b3a7b374de399a4630a4b87e65d.png" alt="在这里插入图片描述"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">def sigmoid(z):</span><br><span class="line">    &quot;&quot;&quot;The sigmoid function.&quot;&quot;&quot;</span><br><span class="line">    return 1.0/(1.0+np.exp(-z))</span><br><span class="line"></span><br><span class="line">def sigmoid_prime(z):</span><br><span class="line">    &quot;&quot;&quot;Derivative of the sigmoid function.&quot;&quot;&quot;</span><br><span class="line">    return sigmoid(z)*(1-sigmoid(z))</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2022/09/17/%E5%8D%8A%E5%AF%BC%E4%BD%93%E7%89%A9%E7%90%86%E5%A4%8D%E4%B9%A0/" rel="next" title="半导体物理">
+                <i class="fa fa-chevron-left"></i> 半导体物理
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/header.jpg"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+             
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%9A%84%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">神经网络的结构：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%84%9F%E7%9F%A5%E5%99%A8%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">感知器：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%8B%E5%86%99%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%9A"><span class="nav-number">3.</span> <span class="nav-text">手写数字识别神经网络：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">代码分析：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">NMOS's Blog</span>
+
+  
+</div>
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  总浏览量:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+<span class="post-meta-divider">|</span>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>  
+  <script src="/js/src/Valine.min.js"></script>  
+
+    
+  
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'tBTzynWAG3imAbF8f1eIFdwQ-gzGzoHsz',
+        appKey: 'Xnx7HCmSRoTHiem8fPK07hOs',
+        placeholder: 'Just say say',
+        avatar:'wavatar',
+        guest_info:['nick','mail'] ,  
+        pageSize:'10' || 10,
+    });
+    
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
+  </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
